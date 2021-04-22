@@ -1,11 +1,6 @@
 {
-  "name": "alunoo",
+  "name": "platform",
   "plugins": [
-    {
-      "name": "TailwindCSS",
-      "description": "A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.",
-      "url": "https://tailwindcss.com/docs"
-    },
     {
       "name": "Styled Components",
       "description": "Utilising tagged template literals (a recent addition to JavaScript) and the power of CSS, styled-components allows you to write actual CSS code to style your components.",
@@ -22,19 +17,9 @@
       "url": "https://react-svgr.com/docs/getting-started/"
     },
     {
-      "name": "Bundle Analyzer",
-      "description": "Use webpack-bundle-analyzer in your Next.js project. Visualize size of webpack output files with an interactive zoomable treemap.",
-      "url": "https://github.com/vercel/next.js/tree/canary/packages/next-bundle-analyzer"
-    },
-    {
       "name": "SWR",
       "description": "React Hooks library for data fetching from Vercel",
       "url": "https://swr.vercel.app/"
-    },
-    {
-      "name": "react-use",
-      "description": "A Collection of useful React hooks.",
-      "url": "https://github.com/streamich/react-use"
     },
     {
       "name": "MobX",

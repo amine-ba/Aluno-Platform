@@ -1,6 +1,7 @@
 import { render } from "@test";
 
 import data from "@public/meta.json";
+
 import { Cards } from "./index";
 
 describe("Cards component testing with testing-library", () => {

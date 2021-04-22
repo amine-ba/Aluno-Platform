@@ -14,4 +14,8 @@ describe("Header component testing with testing-library", () => {
   it("renders successfuly next.js logo", () => {
     expect(container.firstChild).toBeDefined();
   });
+
+  it("renders successfuly theme switch", () => {
+    expect(container.lastChild).toBeDefined();
+  });
 });

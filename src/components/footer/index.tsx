@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   PankodIcon,
   GithubIcon,
@@ -6,41 +7,32 @@ import {
   YoutubeIcon,
   LinkedinIcon,
 } from "@components/icons";
+import { Container, LogoButton, List, ListItem } from "./styled";
 
 export const Footer: React.FC = () => {
   return (
-    <div className="text-center py-5 bg-gray-800">
-      <a
+    <Container>
+      <LogoButton
         href="https://github.com/pankod"
         target="_blank"
-        className="block mb-3"
         data-testid="pankod-logo"
       >
-        <PankodIcon
-          data-test="icon"
-          className="text-white mx-auto"
-          width="140"
-          height="28"
-        />
-      </a>
-
-      <ul
-        className="flex justify-center list-none p-0 m-0"
-        data-testid="icons-container"
-      >
-        <li className="mx-3">
-          <GithubIcon data-test="icon" color="white" width="28" height="29" />
-        </li>
-        <li className="mx-3">
-          <TwitterIcon data-test="icon" color="white" width="28" height="28" />
-        </li>
-        <li className="mx-3">
-          <YoutubeIcon data-test="icon" color="white" width="28" height="29" />
-        </li>
-        <li className="mx-3">
-          <LinkedinIcon data-test="icon" color="white" width="28" height="32" />
-        </li>
-      </ul>
-    </div>
+        <PankodIcon color="white" width="140" height="28" />
+      </LogoButton>
+      <List data-testid="icons-container">
+        <ListItem>
+          <GithubIcon color="white" width="28" height="29" />
+        </ListItem>
+        <ListItem>
+          <TwitterIcon color="white" width="28" height="28" />
+        </ListItem>
+        <ListItem>
+          <YoutubeIcon color="white" width="28" height="29" />
+        </ListItem>
+        <ListItem>
+          <LinkedinIcon color="white" width="28" height="32" />
+        </ListItem>
+      </List>
+    </Container>
   );
 };

@@ -1,16 +1,17 @@
 import React from "react";
 
-import { Container, Header, Main, Footer, Cards } from "@components";
+import { Wrapper, Header, Main, Footer, Cards } from "@components";
+import GlobalStyle from "@styles/globalStyles";
 
 const Home: React.FC = () => {
   return (
-    <Container>
+    <Wrapper>
+      <GlobalStyle />
       <Header />
       <Main />
       <Cards />
       <Footer />
-    </Container>
+    </Wrapper>
   );
 };
-
 export default Home;
