@@ -1,17 +1,22 @@
 import React from "react";
 
-import { Wrapper, Header, Main, Footer, Cards } from "@components";
-import GlobalStyle from "@styles/globalStyles";
+import { Header, Main, Cards, Footer } from "@components";
 
 const Home: React.FC = () => {
-  return (
-    <Wrapper>
-      <GlobalStyle />
-      <Header />
-      <Main />
-      <Cards />
-      <Footer />
-    </Wrapper>
-  );
+    return (
+        <div
+            style={{
+                display: "flex",
+                flexDirection: "column",
+                minHeight: "100vh",
+            }}
+        >
+            <Header />
+            <Main />
+            <Cards />
+            <Footer />
+        </div>
+    );
 };
+
 export default Home;

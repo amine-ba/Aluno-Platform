@@ -1,5 +1,7 @@
 import React from "react";
 import { AppProps } from "next/app";
+import "antd/dist/antd.css";
+import "./dashboard.css";
 import { StyledThemeProvider } from "@definitions/styled-components";
 import { RootStoreProvider } from "@mobx";
 

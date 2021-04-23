@@ -1,31 +1,17 @@
 import React from "react";
+import { Row, Col } from "antd";
 
+import { Card } from "@components";
 import data from "@public/meta.json";
-import {
-  Row,
-  Col,
-  Container,
-  Card,
-  CardBody,
-  CardText,
-  CardTitle,
-} from "./styled";
 
 export const Cards: React.FC = () => {
-  return (
-    <Container>
-      <Row>
-        {(data?.plugins ?? []).map((plugin) => (
-          <Col key={plugin.name} data-testid="container">
-            <Card>
-              <CardBody>
-                <CardTitle>{plugin.name}</CardTitle>
-                <CardText>{plugin.description}</CardText>
-              </CardBody>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-    </Container>
-  );
+    return (
+        <Row style={{ flex: 1 }}>
+            {(data?.plugins ?? []).map((plugin) => (
+                <Col md={6} key={plugin.name} data-testid="container">
+                    <Card title={plugin.name}>{plugin.description}</Card>
+                </Col>
+            ))}
+        </Row>
+    );
 };

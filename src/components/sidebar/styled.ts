@@ -1,6 +1,5 @@
 import styled from "styled-components";
-
-export const Wrapper = styled.div`
+export const StyledButton = styled.Button`
   display: flex;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.background};

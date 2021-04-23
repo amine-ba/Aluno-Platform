@@ -1,12 +1,9 @@
 import React from "react";
+import { Button as BaseButton } from "antd";
+import { ButtonProps } from "antd/lib/button";
 
-import { BaseButton } from "./styled";
-
-export type IButton = React.DetailedHTMLProps<
-  React.ButtonHTMLAttributes<HTMLButtonElement>,
-  HTMLButtonElement
->;
+export type IButton = ButtonProps;
 
 export const Button: React.FC<IButton> = ({ ...rest }) => {
-  return <BaseButton {...rest} data-testid="btn" />;
+    return <BaseButton {...rest} data-testid="btn" />;
 };

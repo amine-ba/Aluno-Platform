@@ -8,14 +8,14 @@ import { types } from "mobx-state-tree";
  */
 
 export const CounterStore = types
-  .model("Counter", {
-    count: 0,
-  })
-  .actions((counter) => ({
-    increase() {
-      counter.count += 1;
-    },
-    decrease() {
-      counter.count -= 1;
-    },
-  }));
+    .model("Counter", {
+        count: 0,
+    })
+    .actions((counter) => ({
+        increase() {
+            counter.count += 1;
+        },
+        decrease() {
+            counter.count -= 1;
+        },
+    }));

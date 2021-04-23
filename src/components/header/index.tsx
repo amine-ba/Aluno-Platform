@@ -1,15 +1,14 @@
 import React from "react";
 
-import { Logo, Toggle } from "@components";
-import { Wrapper, Container } from "./styled";
+import { Logo } from "@components";
 
 export const Header: React.FC = () => {
-  return (
-    <Wrapper>
-      <Container data-testid="container">
-        <Logo />
-        <Toggle />
-      </Container>
-    </Wrapper>
-  );
+    return (
+        <div
+            style={{ backgroundColor: "#20232a", textAlign: "center" }}
+            data-testid="container"
+        >
+            <Logo />
+        </div>
+    );
 };

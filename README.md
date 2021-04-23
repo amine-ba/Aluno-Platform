@@ -1,4 +1,4 @@
-# platform
+# alunoo
 
 This project was generated with [superplate](https://github.com/pankod/superplate).
 
@@ -28,6 +28,12 @@ Every plugin comes with an example to give you a brief knowledge about their usa
     yarn start
 ```
 
+### Linting & formatting your code.
+
+```bash
+    yarn lint
+```
+
 ### Running your tests.
 
 ```bash
@@ -37,6 +43,12 @@ Every plugin comes with an example to give you a brief knowledge about their usa
 ## Learn More
 
 To learn more about **superplate**, please check out the [Documentation](https://github.com/pankod/superplate).
+
+### **Ant Design**
+
+A design system for enterprise-level products. Create an efficient and enjoyable work experience.
+
+[Go To Documentation](https://ant.design/docs/react/introduce)
 
 ### **Styled Components**
 
@@ -62,6 +74,12 @@ React Hooks library for data fetching from Vercel
 
 [Go To Documentation](https://swr.vercel.app/)
 
+### **react-use**
+
+A Collection of useful React hooks.
+
+[Go To Documentation](https://github.com/streamich/react-use)
+
 ### **MobX**
 
 MobX is unopinionated and allows you to manage your application state outside of any UI framework.
@@ -73,6 +91,12 @@ MobX is unopinionated and allows you to manage your application state outside of
 MobX-State-Tree (also known as MST) is a state container system built on MobX, a functional reactive state library.
 
 [Go To Documentation](https://mobx-state-tree.js.org/intro/welcome)
+
+### **Prettier**
+
+An opinionated code formatter; Supports many languages; Integrates with most editors.
+
+[Go To Documentation](https://prettier.io/docs/en/index.html)
 
 ### **Testing Library**
 
