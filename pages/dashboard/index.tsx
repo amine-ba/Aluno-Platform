@@ -9,28 +9,21 @@ import {
   UploadOutlined,
 } from "@ant-design/icons";
 import React, { useState } from "react";
-import { StyledLayout, StyledContent } from "./styled";
+import { StyledContent, StyledLayout } from "./styled";
 
 const { Header, Sider, Content } = Layout;
 
 const Dashboard = () => {
   const [collapsed, setCollapsed] = useState(false);
 
-  const toggle = () => {
-    setCollapsed(!collapsed);
-  };
-
   return (
     <Layout>
       <Sidebar />
       <StyledLayout>
-        <Header className="site-layout-background" style={{ padding: 0 }}>
-          {collapsed ? (
-            <MenuUnfoldOutlined className="trigger" onClick={() => toggle} />
-          ) : (
-            <MenuFoldOutlined className="trigger" onClick={() => toggle} />
-          )}
-        </Header>
+        <Header
+          className="site-layout-background"
+          style={{ padding: 0 }}
+        ></Header>
         <StyledContent>
           <RecommendedPath />
         </StyledContent>

@@ -7,8 +7,8 @@ export const StyledLayout = styled(Layout)`
 `;
 
 export const StyledContent = styled(Content)`
-  margin: "24px 16px";
-  padding: 24;
-  min-height: 280;
+  margin: 16px;
+  padding: 24px;
+  min-height: 280px;
   background-color: #fff;
 `;
