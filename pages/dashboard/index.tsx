@@ -1,6 +1,8 @@
 import { Layout, Menu } from "antd";
 import { RecommendedPath } from "@components/recommendedPath";
 import { Sidebar } from "@components/sidebar";
+import { Timetable } from "@components/timetable";
+
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
@@ -9,7 +11,7 @@ import {
   UploadOutlined,
 } from "@ant-design/icons";
 import React, { useState } from "react";
-import { StyledContent, StyledLayout } from "./styled";
+import { StyledContent, StyledLayout, StyledCalendarContent,StyledBadgeContent,ParentSection} from "./styled";
 
 const { Header, Sider, Content } = Layout;
 
@@ -24,9 +26,13 @@ const Dashboard = () => {
           className="site-layout-background"
           style={{ padding: 0 }}
         ></Header>
+        <ParentSection>
         <StyledContent>
-          <RecommendedPath />
+          <RecommendedPath /> 
         </StyledContent>
+        <StyledBadgeContent></StyledBadgeContent>
+        </ParentSection>
+        <StyledCalendarContent><Timetable/></StyledCalendarContent>
       </StyledLayout>
     </Layout>
   );

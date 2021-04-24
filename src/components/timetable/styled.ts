@@ -23,3 +23,33 @@ export const Container = styled.div`
     font-weight: 300;
   }
 `;
+
+export const CalendarFormat = styled.div`
+  .events {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.events .ant-badge-status {
+  width: 100%;
+  overflow: hidden;
+  font-size: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.notes-month {
+  font-size: 10px;
+  text-align: center;
+}
+.notes-month section {
+  font-size: 10px;
+}
+`;
+
+export const CalendarCardFormat = styled.div`
+  height:100%;
+  width:100%;
+  /* border: 1px solid green; */
+  border-radius: 2px;
+`;
+

@@ -23,3 +23,12 @@ export const Container = styled.div`
     font-weight: 300;
   }
 `;
+
+export const ScrollInside = styled.div`
+  overflow:hidden;
+  margin: 16px;
+  overflow-y:auto;
+  width:63%;
+  height:450px;
+`;
+

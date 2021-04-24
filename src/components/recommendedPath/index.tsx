@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { SequenceItem } from "@components";
-import { StyledCard } from "./styled";
+import { StyledCard} from "./styled";
 export const RecommendedPath: React.FC = () => {
   return (
     <div>
