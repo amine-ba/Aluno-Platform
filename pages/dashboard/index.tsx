@@ -20,7 +20,7 @@ const Dashboard = () => {
 
   return (
     <Layout>
-      <Sidebar />
+      <Sidebar/>
       <StyledLayout>
         <Header
           className="site-layout-background"

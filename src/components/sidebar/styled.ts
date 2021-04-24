@@ -6,7 +6,6 @@ export const StyledButton = styled.Button`
   padding: 2rem 0;
   color: ${({ theme }) => theme.colors.white};
 `;
-
 export const Container = styled.div`
   text-align: center;
   max-width: 71rem;

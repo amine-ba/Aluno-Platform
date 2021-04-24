@@ -1,5 +1,6 @@
 import React from "react";
 import { Skeleton, Switch, Card, Avatar } from "antd";
+import { StyledCard} from "./styled";
 const { Meta } = Card;
 
 type sequenceItemProps = {
@@ -20,14 +21,17 @@ export const SequenceItem = ({
   topic,
 }: sequenceItemProps) => {
   return (
-    <Card style={{ width: 300, marginTop: 16, borderRadius: 10 }}>
+    <a href="#">
+    <Card style={{ width: 300, marginTop: 16, borderRadius: 10, backgroundColor:color}}>
       <Meta
         avatar={
-          <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+          <Avatar src={icon}/>
         }
         title={subject}
-        description={"7am - 9am "}
+        style={{backgroundColor:color}}
+        description={"7am - 9am" + "\n" + concept + ":" + topic}
       />
     </Card>
+    </a>
   );
 };

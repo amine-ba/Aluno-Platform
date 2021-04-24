@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import { SequenceItem } from "@components";
-import { StyledCard} from "./styled";
 export const RecommendedPath: React.FC = () => {
   return (
     <div>
       <SequenceItem
-        icon={"dssdvd"}
+        icon={"dfddfbg"}
         progress={24}
         subject={"Mathematics"}
-        color={"red"}
+        color={"#e9eaf4"}
         concept={"Numerators"}
         topic={"Fractions"}
       />
@@ -16,7 +15,7 @@ export const RecommendedPath: React.FC = () => {
         icon={"fvfdvs"}
         progress={65}
         subject={"Mathematics"}
-        color={"blue"}
+        color={"#ebfafe"}
         concept={"Numerators"}
         topic={"Decimals and Percentages"}
       />
@@ -24,7 +23,7 @@ export const RecommendedPath: React.FC = () => {
         icon={"dcdccd"}
         progress={21}
         subject={"Mathematics"}
-        color={"green"}
+        color={"#ffeeea"}
         concept={"Geometry"}
         topic={"Properties of Angles"}
       />
@@ -32,7 +31,7 @@ export const RecommendedPath: React.FC = () => {
         icon={"cdvvdf"}
         progress={14}
         subject={"Mathematics"}
-        color={"purple"}
+        color={"#cdf2e0"}
         concept={"Algebra"}
         topic={"Algebraic Manipulation"}
       />
@@ -40,7 +39,7 @@ export const RecommendedPath: React.FC = () => {
         icon={"trntrg"}
         progress={90}
         subject={"Mathematics"}
-        color={"yellow"}
+        color={"#fff9ec"}
         concept={"Algebra"}
         topic={"Sequences and Graphs"}
       />

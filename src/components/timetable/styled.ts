@@ -30,6 +30,7 @@ export const CalendarFormat = styled.div`
   padding: 0;
   list-style: none;
 }
+
 .events .ant-badge-status {
   width: 100%;
   overflow: hidden;
@@ -49,7 +50,7 @@ export const CalendarFormat = styled.div`
 export const CalendarCardFormat = styled.div`
   height:100%;
   width:100%;
-  /* border: 1px solid green; */
+  border: 1px solid green;
   border-radius: 2px;
 `;
 
