@@ -8,3 +8,5 @@ export { Card } from "./card";
 export { SequenceItem } from "./sequenceItem";
 export { RecommendedPath } from "./recommendedPath";
 export { Sidebar } from "./sidebar";
+export { BadgeItem } from "./badge";
+

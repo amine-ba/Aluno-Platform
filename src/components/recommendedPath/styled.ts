@@ -24,11 +24,11 @@ import styled from "styled-components";
 //   }
 // `;
 
-// export const ScrollInside = styled.div`
-//   overflow:hidden;
-//   margin: 16px;
-//   overflow-y:auto;
-//   width:63%;
-//   height:450px;
-// `;
+export const ScrollInside = styled.div`
+  overflow:hidden;
+  margin: 16px;
+  overflow-y:auto;
+  width:450px;
+  height:750px;
+`;
 

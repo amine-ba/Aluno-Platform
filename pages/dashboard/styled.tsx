@@ -14,7 +14,7 @@ export const StyledContent = styled(Content)`
   margin: 16px;
   padding: 24px;
   min-height: 400px;
-  background-color: #fd5e36;
+  background-color: #fd7351;
   border-radius:15px;
   width: 60%;
 `;
@@ -22,20 +22,20 @@ export const StyledContent = styled(Content)`
 export const StyledBadgeContent = styled(Content)`
   margin: 16px;
   /* min-height: 280px; */
-  height: 31%;  
-  background-color: #2c3790;
+  height: 27%;  
+  background-color: #5262df;
   border-radius:15px;
   width:50%;
 `;
 export const StyledCalendarContent = styled(Content)`
   display: flex;
   margin-left: 56%;
-  margin-top:-40%;
+  margin-top:-52%;
   min-height: 280px;
   background-color: #42ae79;
   border-radius:15px;
   /* height:21.4rem; */
-  height:22.2rem;
+  height:23rem;
   width:42.5%;
 `;
 

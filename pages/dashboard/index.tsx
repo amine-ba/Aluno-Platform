@@ -1,6 +1,7 @@
 import { Layout, Menu,DatePicker, Space } from "antd";
 import { RecommendedPath } from "@components/recommendedPath";
 import { Sidebar } from "@components/sidebar";
+import { BadgeItem } from "@components/badge";
 import { Timetable } from "@components/timetable";
 import {
   MenuUnfoldOutlined,
@@ -35,7 +36,22 @@ const Dashboard = () => {
         <DatePicker style={{borderRadius:15, width:400}}onChange={onChange} />
           <RecommendedPath /> 
         </StyledContent>
-        <StyledBadgeContent></StyledBadgeContent>
+        <StyledBadgeContent>
+        {/* <ParentSection> */}
+          <BadgeItem 
+          icon={"./logo.png"}
+          title={"Average Score"}
+          color={"#676ea8"}
+          achievement={"84%"}
+          />
+          <BadgeItem 
+          icon={"./logo.png"}
+          title={"Medals Earned This Week"}
+          color={"#f0592c"}
+          achievement={"7"}
+          />
+          {/* </ParentSection> */}
+        </StyledBadgeContent>
         </ParentSection>
         <StyledCalendarContent><Timetable/></StyledCalendarContent>
       </StyledLayout>
