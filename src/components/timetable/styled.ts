@@ -50,7 +50,8 @@ export const CalendarFormat = styled.div`
 export const CalendarCardFormat = styled.div`
   height:100%;
   width:100%;
-  border: 1px solid green;
-  border-radius: 2px;
+  /* border: 2px solid green; */
+  border-radius:15px;
+;
 `;
 

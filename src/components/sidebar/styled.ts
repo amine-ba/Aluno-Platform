@@ -1,23 +1,23 @@
 import styled from "styled-components";
-export const StyledButton = styled.Button`
-  display: flex;
-  justify-content: center;
-  background-color: ${({ theme }) => theme.colors.background};
-  padding: 2rem 0;
-  color: ${({ theme }) => theme.colors.white};
-`;
-export const Container = styled.div`
-  text-align: center;
-  max-width: 71rem;
 
-  h1 {
-    font-size: 5.5rem;
-    font-weight: 300;
-    line-height: 1.2rem;
-    padding-bottom: 0.75rem;
-  }
-  p {
-    font-size: 1.25rem;
-    font-weight: 300;
-  }
+export const Logo = styled.div`
+  height: 32px;
+  margin: 16px;
+  background-image: url("./logo.png");
+`;
+
+export const Trigger = styled.div`
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+`;
+
+export const TriggerHover = styled.div`
+  color: #1890ff;
+`;
+
+export const SitelayoutBackground = styled.div`
+  background: #fff;
 `;

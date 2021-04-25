@@ -7,6 +7,9 @@ import {
   UploadOutlined,
 } from "@ant-design/icons";
 import { useState } from "react";
+import {Logo,Trigger} from "./styled";
+
+
 const { Header, Sider, Content } = Layout;
 export const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -17,7 +20,7 @@ export const Sidebar = () => {
 
   return (
     <Sider trigger={null} collapsible collapsed={collapsed}>
-      <div className="logo" />
+      <Logo/>
       <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
         <Menu.Item key="1" icon={<UserOutlined />}>
           Dashboard
@@ -29,11 +32,15 @@ export const Sidebar = () => {
           Profile
         </Menu.Item>
         {collapsed ? (
-          <MenuUnfoldOutlined className="trigger" onClick={toggle} />
+          <Trigger>
+          <MenuUnfoldOutlined onClick={toggle} />
+          </Trigger>
         ) : (
-          <MenuFoldOutlined className="trigger" onClick={toggle} />
+          <Trigger>
+          <MenuFoldOutlined onClick={toggle} />
+          </Trigger>
         )}
       </Menu>
-    </Sider>
+      </Sider>
   );
 };

@@ -2,7 +2,6 @@ import React from "react";
 import { Skeleton, Switch, Card, Avatar } from "antd";
 import { StyledCard} from "./styled";
 const { Meta } = Card;
-
 type sequenceItemProps = {
   icon: string;
   color: string;
@@ -22,16 +21,17 @@ export const SequenceItem = ({
 }: sequenceItemProps) => {
   return (
     <a href="#">
-    <Card style={{ width: 300, marginTop: 16, borderRadius: 10, backgroundColor:color}}>
+      <StyledCard>
+      <Card style={{background:color,borderRadius:15}}>
       <Meta
         avatar={
           <Avatar src={icon}/>
         }
         title={subject}
-        style={{backgroundColor:color}}
-        description={"7am - 9am" + "\n" + concept + ":" + topic}
+        description={<React.Fragment>7am - 9am <br/> {concept}: {topic} <br/> Progress: {progress}%</React.Fragment>}
       />
-    </Card>
+      </Card>
+      </StyledCard>
     </a>
   );
 };
