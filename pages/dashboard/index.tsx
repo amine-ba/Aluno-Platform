@@ -32,8 +32,8 @@ const Dashboard = () => {
         <SiteLayoutBackground/>
         <ParentSection>
         <StyledContent>
-          <h1 style={{paddingLeft:5}}>Today's Plan <BookOutlined style={{color: "#fff"}} /></h1>
-        <DatePicker style={{borderRadius:15, width:400}}onChange={onChange} />
+          {/* <h1 style={{paddingLeft:5}}>Today's Plan <BookOutlined style={{color: "#fff"}} /></h1> */}
+        {/* <DatePicker style={{borderRadius:15, width:400}}onChange={onChange} /> */}
           <RecommendedPath /> 
         </StyledContent>
         <StyledBadgeContent>
@@ -53,7 +53,7 @@ const Dashboard = () => {
           {/* </ParentSection> */}
         </StyledBadgeContent>
         </ParentSection>
-        <StyledCalendarContent><Timetable/></StyledCalendarContent>
+        {/* <StyledCalendarContent><Timetable/></StyledCalendarContent> */}
       </StyledLayout>
     </Layout>
     </FontStyle>
