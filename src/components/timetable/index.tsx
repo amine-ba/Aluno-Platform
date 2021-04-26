@@ -68,7 +68,7 @@ export const Timetable: React.FC = () => {
   return (
     <div>
       <CalendarCardFormat>
-      <Typography.Title style={{paddingLeft: 8, paddingTop: 2}} level={5}>Homework and Assignments</Typography.Title>
+      <Typography.Title style={{paddingLeft: 8, paddingTop: 2, fontWeight:200}} level={5}>Homework and Assignments</Typography.Title>
       {/* <Calendar fullscreen={false} dateCellRender={dateCellRender} monthCellRender={monthCellRender}/> */}
       <Calendar fullscreen={false} onPanelChange={onPanelChange} />
       </CalendarCardFormat>

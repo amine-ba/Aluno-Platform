@@ -52,6 +52,5 @@ export const CalendarCardFormat = styled.div`
   width:100%;
   border: 2px solid green;
   border-radius:15px;
-;
 `;
 
