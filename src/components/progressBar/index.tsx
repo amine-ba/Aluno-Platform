@@ -49,9 +49,6 @@ function update(){
   }   
 // }
 
-
-
-
 export const ProgressBar = ({
 }) => {
   return (
