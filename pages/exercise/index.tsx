@@ -21,7 +21,6 @@ const Exercise = () => {
       <StyledContent>
         <ProgressBar></ProgressBar>
       </StyledContent>
-
     </Layout>
     </FontStyle>
   );

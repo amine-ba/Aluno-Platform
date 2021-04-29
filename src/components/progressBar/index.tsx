@@ -1,89 +1,159 @@
-import { UPDATE } from "mobx/dist/internal";
 import React from "react";
-import {BodyStyle,Container,ProgressContainer,Progress,Circle,Button} from "./styled";
+import { Skeleton, Switch, Card, Avatar } from "antd";
+import {Center, Wrapper,Content,ImgBox,ImgBoxImg} from "./styled";
+import Stepper from "@material-ui/core/Stepper"
+import Step from "@material-ui/core/Step"
+import StepLabel from "@material-ui/core/StepLabel"
+import Button from "@material-ui/core/Button"
+import { makeStyles, Theme, createStyles, withStyles } from '@material-ui/core/styles';
+import { Slide } from 'react-slideshow-image';
+import {motion} from 'framer-motion';
 
-// if (process.browser) {
-const progress = document.getElementById("progress");
-const prev = document.getElementById("prev");
-const next = document.getElementById("next");
-const circles = document.querySelectorAll(".circles");
 
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      width: '100%',
+    },
+    button: {
+      marginRight: theme.spacing(5),
+    },
+    instructions: {
+      marginTop: theme.spacing(1),
+      marginBottom: theme.spacing(1),
+    },
+  }),
+);
 
-let currentActive = 1;
+const slideImages = [
+  'https://randomwordgenerator.com/picture.php',
+  'https://randomwordgenerator.com/picture.php',
+  'https://randomwordgenerator.com/picture.php'
+];
 
-next.addEventListener("click",()=>{
-  currentActive++;
-  if(currentActive > circles.length){
-    currentActive = circles.length;
-  }
-  update();
-});
-
-prev.addEventListener("click",()=>{
-  currentActive--;
-  if(currentActive < 1){
-    currentActive = 1;
-  }
-  update();
-});
-
-function update(){
-  circles.forEach((circle,idx)=>{
-    if(idx < currentActive){
-      circle.classList.add("active");
-    } else {
-      circle.classList.remove("active");
+const imgBoxVariants = {
+  hidden:{
+    x: 500,
+    opacity: 0
+  },
+  visible:{
+    x: 0,
+    opacity: 1,
+    transition:{
+      delay: 0.5, duration: 0.5
     }
-  });
-  const actives = document.querySelectorAll(".active");
-  progress.style.width = ((actives.length - 1)/(circles.length-1)) * 100 + "%";
+  }
+}
 
-// if(currentActive === 1){
-//   prev.disabled = true;
-// } else if (currentActive === circles.length){
-//   next.disabled = true;
-// }else{
-//   prev.disabled = false;
-//   next.disabled = false;
-// }
-  }   
-// }
+const properties = {
+  duration: 5000,
+  transitionDuration: 500,
+  infinite: true,
+  indicators: true,
+  arrows: true
+}
 
-export const ProgressBar = ({
-}) => {
+export const ProgressBar = () => {
+  const classes = useStyles();
+  const [activeStep, setActiveStep] = React.useState(0)
+
+  const nextStep = () => {
+    if(activeStep < 4){
+    setActiveStep((currentStep)=> currentStep + 1)
+    }
+  }
+
+  const previousStep = () => {
+    if(activeStep !== -1){
+    setActiveStep((currentStep)=> currentStep - 1)
+    }
+  }
+
   return (
-    <BodyStyle>
-      <Container>
-        <ProgressContainer>
-        <Progress>
-    {/* <div className="bodyStyle"> */}
-    {/* <div className="container"> */}
-      {/* <div className="progress-container"> */}
-      
-        {/* <div className="progress" id="progress"> */}
-        <div id="progress">
-          <Circle></Circle> 
-          <Circle></Circle> 
-          <Circle></Circle> 
-          <Circle></Circle> 
-          <Circle></Circle> 
-          {/* <div className="circle active"></div>
-          <div className="circle active"></div>
-          <div className="circle active"></div>
-          <div className="circle active"></div>
-          <div className="circle active"></div>  */}
-        </div>       
-        {/* </div> */}
-      {/* </div> */}
-    {/* </div> */}
-    </Progress>
-    </ProgressContainer>
-    </Container>
-    <Button>
-    <button id="prev" disabled>Prev</button>
-    <button id="next">Next</button>
-    </Button>
-    {/* </div> */}
-    </BodyStyle>
+    <div className={classes.root}>
+      <Stepper activeStep={activeStep}>
+        <Step>
+          <StepLabel></StepLabel>
+        </Step>
+        <Step>
+          <StepLabel></StepLabel>
+        </Step>
+        <Step>
+          <StepLabel></StepLabel>
+        </Step>
+        <Step>
+          <StepLabel></StepLabel>
+        </Step>
+        <Step>
+          <StepLabel></StepLabel>
+        </Step>
+      </Stepper>
+      <Wrapper>
+        <Content>
+
+    {activeStep === 1&&<motion.div  variants={imgBoxVariants}
+    initial="hidden" animate="visible">
+      <ImgBox>
+      <ImgBoxImg>
+      <img src={"https://picsum.photos/800/500"}/> 
+      </ImgBoxImg>
+      </ImgBox>       
+    </motion.div>}
+
+    {activeStep === 2 &&<motion.div variants={imgBoxVariants}
+    initial="hidden" animate="visible">
+      <ImgBox>
+      <ImgBoxImg>
+      <img src={"https://picsum.photos/800/500"}/>  
+      </ImgBoxImg>  
+      </ImgBox>     
+    </motion.div>}
+
+    {activeStep === 3 &&<motion.div variants={imgBoxVariants}
+    initial="hidden" animate="visible">
+      <ImgBox>
+      <ImgBoxImg>
+      <img src={"https://picsum.photos/800/500"}/> 
+      </ImgBoxImg>  
+      </ImgBox>        
+    </motion.div>}
+
+    {activeStep === 4 &&<motion.div variants={imgBoxVariants}
+    initial="hidden" animate="visible">
+      <ImgBox>
+      <ImgBoxImg>
+      <img src={"https://picsum.photos/800/500"}/> 
+      </ImgBoxImg>  
+      </ImgBox>        
+    </motion.div>}
+
+    {activeStep === 5 &&<motion.div variants={imgBoxVariants}
+    initial="hidden" animate="visible">
+      <ImgBox>
+      <ImgBoxImg>
+      <img src={"https://picsum.photos/800/500"}/> 
+      </ImgBoxImg>  
+      </ImgBox>        
+    </motion.div>}
+
+    </Content>
+    </Wrapper>
+    <Center>
+      <Button
+      className={classes.button}
+      disabled={activeStep === 4}
+      variant="outlined"
+      color="primary"
+      onClick={()=>nextStep()}
+      >Next</Button>
+      <Button
+      className={classes.button}
+      disabled={activeStep === 0}
+      variant="outlined"
+      color="primary"
+      onClick={()=>previousStep()}
+      >Previous</Button>  
+      </Center>   
+    </div>
   );
 };
