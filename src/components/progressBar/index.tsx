@@ -1,6 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import { Skeleton, Switch, Card, Avatar } from "antd";
-import {Center, Wrapper,Content,ImgBox,ImgBoxImg} from "./styled";
+import {Center, Wrapper,Content,ImgBox,ImgBoxImg,ParentSection} from "./styled";
 import Stepper from "@material-ui/core/Stepper"
 import Step from "@material-ui/core/Step"
 import StepLabel from "@material-ui/core/StepLabel"
@@ -54,6 +54,13 @@ const properties = {
 }
 
 export const ProgressBar = () => {
+
+const [toggle,setToggle] = useState(false);
+
+const toggler = () => {
+  toggle ? setToggle(false):setToggle(true);
+}
+
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0)
 
@@ -88,9 +95,10 @@ export const ProgressBar = () => {
           <StepLabel></StepLabel>
         </Step>
       </Stepper>
+      <Switch style={{marginLeft:20, marginBottom:20,display:"flex"}} onClick={toggler}/>
+      {toggle ? <span style={{marginLeft:20,display:"flex"}}>Exercise A</span> : <span style={{marginLeft:20,display:"flex"}}>Video Tutorial</span>}
       <Wrapper>
         <Content>
-
     {activeStep === 1&&<motion.div  variants={imgBoxVariants}
     initial="hidden" animate="visible">
       <ImgBox>

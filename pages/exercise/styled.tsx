@@ -19,7 +19,7 @@ export const StyledContent = styled(Content)`
   background: #fff;
   border-radius:15px;
   width: 60%;
-  height:100vh;
+  height:100%;
 `;
 
 

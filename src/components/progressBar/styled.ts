@@ -21,7 +21,9 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 40%;
+  margin-left: 30%;
+  margin-top:10px;
+  margin-bottom:30px;
 `;
 
 export const ImgBox = styled.div`
@@ -32,6 +34,10 @@ export const ImgBox = styled.div`
 export const ImgBoxImg = styled.div`
   width: 100%;
   height: 100%;
+`;
+
+export const ParentSection = styled(Content)`
+display: flex;
 `;
 
 // export const Circle = styled.div``;
