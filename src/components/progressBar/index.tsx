@@ -8,6 +8,7 @@ import Button from "@material-ui/core/Button"
 import { makeStyles, Theme, createStyles, withStyles } from '@material-ui/core/styles';
 import { Slide } from 'react-slideshow-image';
 import {motion} from 'framer-motion';
+import ReactPlayer from 'react-player'
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -17,6 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     button: {
       marginRight: theme.spacing(5),
+      width: 100,
     },
     instructions: {
       marginTop: theme.spacing(1),
@@ -80,30 +82,30 @@ const toggler = () => {
     <div className={classes.root}>
       <Stepper activeStep={activeStep}>
         <Step>
-          <StepLabel></StepLabel>
+          <StepLabel>Numeric Operators</StepLabel>
         </Step>
         <Step>
-          <StepLabel></StepLabel>
+          <StepLabel>Fractions</StepLabel>
         </Step>
         <Step>
-          <StepLabel></StepLabel>
+          <StepLabel>Decimals and Percentages</StepLabel>
         </Step>
         <Step>
-          <StepLabel></StepLabel>
+          <StepLabel>Integers</StepLabel>
         </Step>
         <Step>
-          <StepLabel></StepLabel>
+          <StepLabel>Algebra</StepLabel>
         </Step>
       </Stepper>
       <Switch style={{marginLeft:20, marginBottom:20,display:"flex"}} onClick={toggler}/>
-      {toggle ? <span style={{marginLeft:20,display:"flex"}}>Exercise A</span> : <span style={{marginLeft:20,display:"flex"}}>Video Tutorial</span>}
+      {toggle ? <div><span style={{marginLeft:20,display:"flex"}}>Video Tutorial</span> 
       <Wrapper>
         <Content>
     {activeStep === 1&&<motion.div  variants={imgBoxVariants}
     initial="hidden" animate="visible">
       <ImgBox>
       <ImgBoxImg>
-      <img src={"https://picsum.photos/800/500"}/> 
+      <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />      
       </ImgBoxImg>
       </ImgBox>       
     </motion.div>}
@@ -112,7 +114,7 @@ const toggler = () => {
     initial="hidden" animate="visible">
       <ImgBox>
       <ImgBoxImg>
-      <img src={"https://picsum.photos/800/500"}/>  
+      <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
       </ImgBoxImg>  
       </ImgBox>     
     </motion.div>}
@@ -121,7 +123,7 @@ const toggler = () => {
     initial="hidden" animate="visible">
       <ImgBox>
       <ImgBoxImg>
-      <img src={"https://picsum.photos/800/500"}/> 
+      <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
       </ImgBoxImg>  
       </ImgBox>        
     </motion.div>}
@@ -130,7 +132,7 @@ const toggler = () => {
     initial="hidden" animate="visible">
       <ImgBox>
       <ImgBoxImg>
-      <img src={"https://picsum.photos/800/500"}/> 
+      <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
       </ImgBoxImg>  
       </ImgBox>        
     </motion.div>}
@@ -139,28 +141,83 @@ const toggler = () => {
     initial="hidden" animate="visible">
       <ImgBox>
       <ImgBoxImg>
-      <img src={"https://picsum.photos/800/500"}/> 
+      <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />      
       </ImgBoxImg>  
       </ImgBox>        
     </motion.div>}
 
     </Content>
     </Wrapper>
+    </div>
+      
+    : <div><span style={{marginLeft:20,display:"flex"}}>Exercise</span>
+    <Wrapper>
+        <Content>
+    {activeStep === 1&&<motion.div  variants={imgBoxVariants}
+    initial="hidden" animate="visible">
+      <ImgBox>
+      <ImgBoxImg>
+      <img src={"https://picsum.photos/640/360"}/> 
+      </ImgBoxImg>
+      </ImgBox>       
+    </motion.div>}
+
+    {activeStep === 2 &&<motion.div variants={imgBoxVariants}
+    initial="hidden" animate="visible">
+      <ImgBox>
+      <ImgBoxImg>
+      <img src={"https://picsum.photos/640/360"}/>  
+      </ImgBoxImg>  
+      </ImgBox>     
+    </motion.div>}
+
+    {activeStep === 3 &&<motion.div variants={imgBoxVariants}
+    initial="hidden" animate="visible">
+      <ImgBox>
+      <ImgBoxImg>
+      <img src={"https://picsum.photos/640/360"}/> 
+      </ImgBoxImg>  
+      </ImgBox>        
+    </motion.div>}
+
+    {activeStep === 4 &&<motion.div variants={imgBoxVariants}
+    initial="hidden" animate="visible">
+      <ImgBox>
+      <ImgBoxImg>
+      <img src={"https://picsum.photos/640/360"}/> 
+      </ImgBoxImg>  
+      </ImgBox>        
+    </motion.div>}
+
+    {activeStep === 5 &&<motion.div variants={imgBoxVariants}
+    initial="hidden" animate="visible">
+      <ImgBox>
+      <ImgBoxImg>
+      <img src={"https://picsum.photos/640/360"}/> 
+      </ImgBoxImg>  
+      </ImgBox>        
+    </motion.div>}
+
+    </Content>
+    </Wrapper>
+    </div>
+    }
+      
     <Center>
-      <Button
-      className={classes.button}
-      disabled={activeStep === 4}
-      variant="outlined"
-      color="primary"
-      onClick={()=>nextStep()}
-      >Next</Button>
       <Button
       className={classes.button}
       disabled={activeStep === 0}
       variant="outlined"
       color="primary"
       onClick={()=>previousStep()}
-      >Previous</Button>  
+      >Previous</Button> 
+      <Button
+      className={classes.button}
+      disabled={activeStep === 4}
+      variant="outlined"
+      color="primary"
+      onClick={()=>nextStep()}
+      >Next</Button> 
       </Center>   
     </div>
   );

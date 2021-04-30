@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Skeleton, Switch, Card, Avatar } from "antd";
 
 export const Center = styled.div`
-  margin-top:16% !important;
+  margin-top:5% !important;
   margin-left:40%;
 `;
 
@@ -23,7 +23,7 @@ export const Content = styled.div`
   align-items: center;
   margin-left: 30%;
   margin-top:10px;
-  margin-bottom:30px;
+  margin-bottom:10px;
 `;
 
 export const ImgBox = styled.div`
