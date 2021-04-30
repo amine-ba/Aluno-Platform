@@ -10,5 +10,4 @@ export { RecommendedPath } from "./recommendedPath";
 export { Sidebar } from "./sidebar";
 export { BadgeItem } from "./badge";
 import { ProgressBar } from "/progressBar";
-
-
+import { LessonCard } from "/lessonCard";

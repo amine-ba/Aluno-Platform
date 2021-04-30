@@ -9,7 +9,7 @@ export const Center = styled.div`
 export const Center2 = styled.div`
   margin-top:20%;
   margin-bottom: 5%;
-  margin-left:34%;
+  margin-left:39.5%;
 `;
 
 export const Wrapper = styled.div`
@@ -19,10 +19,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow:hidden;
-  border: 2px solid gray;
-  border-radius: 20px;
-  background-color: #f8f9fe;
+  overflow:hidden
 `;
 
 export const Content = styled.div`
@@ -38,7 +35,7 @@ export const Content = styled.div`
 
 export const ImgBox = styled.div`
   width: 500px;
-  height: 370px;
+  height: 350px;
 `;
 
 export const ImgBoxImg = styled.div`
@@ -49,3 +46,9 @@ export const ImgBoxImg = styled.div`
 export const ParentSection = styled(Content)`
 display: flex;
 `;
+
+// export const Circle = styled.div``;
+// export const Details = styled.div``;
+// export const SubjectText = styled.div``;
+// export const Time = styled.div``;
+// export const Progress = styled.div``;
