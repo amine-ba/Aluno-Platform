@@ -87,19 +87,19 @@ export const ProgressBar = () => {
     <div className={classes.root}>
       <Stepper activeStep={activeStep}>
       <Step>
-          <StepLabel>Start</StepLabel>
+          <StepLabel></StepLabel>
         </Step>
         <Step>
-          <StepLabel>Numeric Operators</StepLabel>
+          <StepLabel></StepLabel>
         </Step>
         <Step>
-          <StepLabel>Fractions</StepLabel>
+          <StepLabel></StepLabel>
         </Step>
         <Step>
-          <StepLabel>Decimals and Percentages</StepLabel>
+          <StepLabel></StepLabel>
         </Step>
         <Step>
-          <StepLabel>Integers</StepLabel>
+          <StepLabel></StepLabel>
         </Step>
         <Step>
           <StepLabel>Algebra</StepLabel>
