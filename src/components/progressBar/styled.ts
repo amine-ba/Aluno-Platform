@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Skeleton, Switch, Card, Avatar } from "antd";
+import { Skeleton, Switch, Card, Avatar, Button} from "antd";
 
 export const Center = styled.div`
   margin-top:3% !important;
@@ -10,6 +10,13 @@ export const Center2 = styled.div`
   margin-top:20%;
   margin-bottom: 5%;
   margin-left:34%;
+`;
+
+
+const ButtonContainer = styled.div`
+  .ant-btn-primary {
+    background-color: #fd7351;
+  }
 `;
 
 export const Wrapper = styled.div`
