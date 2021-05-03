@@ -36,17 +36,3 @@ export const Content = styled.div`
   margin-top:10px;
   margin-bottom:10px;
 `;
-
-export const ImgBox = styled.div`
-  width: 500px;
-  height: 370px;
-`;
-
-export const ImgBoxImg = styled.div`
-  width: 100%;
-  height: 100%;
-`;
-
-export const ParentSection = styled(Content)`
-display: flex;
-`;

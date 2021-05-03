@@ -1,21 +1,19 @@
 import React, {useState} from "react";
-import { Skeleton, Switch, Card, Avatar } from "antd";
+import { Switch } from "antd";
 import {ArrowRightOutlined,ArrowLeftOutlined,CaretLeftOutlined} from "@ant-design/icons";
-import {Center, Wrapper,Content,ImgBox,ImgBoxImg,ParentSection,Center2} from "./styled";
+import {Center, Wrapper,Content,Center2} from "./styled";
 import Stepper from "@material-ui/core/Stepper"
 import Step from "@material-ui/core/Step"
 import StepLabel from "@material-ui/core/StepLabel"
 import Button from "@material-ui/core/Button"
 import { makeStyles, Theme, createStyles, withStyles } from '@material-ui/core/styles';
-import { Slide } from 'react-slideshow-image';
 import {motion} from 'framer-motion';
-import ReactPlayer from 'react-player'
 import { LessonCard } from "@components/lessonCard";
 import StepConnector from '@material-ui/core/StepConnector';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import Check from '@material-ui/icons/Check';
-import { FontStyle } from "pages/dashboard/styled";
+import { VideoCard } from "@components/videoCard";
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -28,7 +26,6 @@ const useStyles = makeStyles((theme: Theme) =>
       width: 100,
       color: '#fd7351',
       border: 0,
-      fontFamily: "Nunito",
     },
     instructions: {
       marginTop: theme.spacing(1),
@@ -75,13 +72,7 @@ function QontoStepIcon(props) {
 }
 
 QontoStepIcon.propTypes = {
-  /**
-   * Whether this step is active.
-   */
   active: PropTypes.bool,
-  /**
-   * Mark the step as completed. Is passed to child components.
-   */
   completed: PropTypes.bool,
 };
 
@@ -183,102 +174,62 @@ export const ProgressBar = () => {
       {toggle ? <div>
       <Wrapper>
         <Content>
-    {activeStep === 1 &&<motion.div  variants={imgBoxVariants}
-    initial="hidden" animate="visible">
-      <ImgBox>
-      <ImgBoxImg>
-      <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />      
-      </ImgBoxImg>
-      </ImgBox>       
-    </motion.div>}
+          {activeStep === 1 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
+            <VideoCard></VideoCard>     
+          </motion.div>}
 
-    {activeStep === 2 &&<motion.div variants={imgBoxVariants}
-    initial="hidden" animate="visible">
-      <ImgBox>
-      <ImgBoxImg>
-      <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
-      </ImgBoxImg>  
-      </ImgBox>     
-    </motion.div>}
+          {activeStep === 2 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
+            <VideoCard></VideoCard>     
+          </motion.div>}
 
-    {activeStep === 3 &&<motion.div variants={imgBoxVariants}
-    initial="hidden" animate="visible">
-      <ImgBox>
-      <ImgBoxImg>
-      <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
-      </ImgBoxImg>  
-      </ImgBox>        
-    </motion.div>}
+          {activeStep === 3 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
+            <VideoCard></VideoCard>      
+          </motion.div>}
 
-    {activeStep === 4 &&<motion.div variants={imgBoxVariants}
-    initial="hidden" animate="visible">
-      <ImgBox>
-      <ImgBoxImg>
-      <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
-      </ImgBoxImg>  
-      </ImgBox>        
-    </motion.div>}
+          {activeStep === 4 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
+            <VideoCard></VideoCard>      
+          </motion.div>}
 
-    {activeStep === 5 &&<motion.div variants={imgBoxVariants}
-    initial="hidden" animate="visible">
-      <ImgBox>
-      <ImgBoxImg>
-      <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />      
-      </ImgBoxImg>  
-      </ImgBox>        
-    </motion.div>}
+          {activeStep === 5 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
+            <VideoCard></VideoCard>      
+          </motion.div>}
 
-    {activeStep === 6 &&<motion.div variants={imgBoxVariants}
-    initial="hidden" animate="visible">
-      <ImgBox>
-      <ImgBoxImg>
-      <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />      
-      </ImgBoxImg>  
-      </ImgBox>        
-    </motion.div>}
-
-    </Content>
+          {activeStep === 6 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
+            <VideoCard></VideoCard>
+          </motion.div>}
+      </Content>
     </Wrapper>
     </div>
-      
     : <div>
     <Wrapper>
         <Content>
-    {activeStep === 1&&<motion.div  variants={imgBoxVariants}
-    initial="hidden" animate="visible">
-      <LessonCard></LessonCard>
-    </motion.div>}
+          {activeStep === 1 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
+            <LessonCard></LessonCard>
+          </motion.div>}
 
-    {activeStep === 2 &&<motion.div variants={imgBoxVariants}
-    initial="hidden" animate="visible">
-      <LessonCard></LessonCard>
-    </motion.div>}
+          {activeStep === 2 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
+            <LessonCard></LessonCard>
+          </motion.div>}
 
-    {activeStep === 3 &&<motion.div variants={imgBoxVariants}
-    initial="hidden" animate="visible">
-      <LessonCard></LessonCard>   
-    </motion.div>}
+          {activeStep === 3 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
+            <LessonCard></LessonCard>   
+          </motion.div>}
 
-    {activeStep === 4 &&<motion.div variants={imgBoxVariants}
-    initial="hidden" animate="visible">
-      <LessonCard></LessonCard>          
-    </motion.div>}
+          {activeStep === 4 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
+            <LessonCard></LessonCard>          
+          </motion.div>}
 
-    {activeStep === 5 &&<motion.div variants={imgBoxVariants}
-    initial="hidden" animate="visible">
-      <LessonCard></LessonCard>        
-    </motion.div>}
+          {activeStep === 5 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
+            <LessonCard></LessonCard>        
+          </motion.div>}
 
-    {activeStep === 6 &&<motion.div variants={imgBoxVariants}
-    initial="hidden" animate="visible">
-      <LessonCard></LessonCard>         
-    </motion.div>}
-
-    </Content>
+          {activeStep === 6 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
+            <LessonCard></LessonCard>         
+          </motion.div>}
+      </Content>
     </Wrapper>
     </div>
-    }
-      
+    } 
     <Center>
       <Button
       className={classes.button}
@@ -296,7 +247,7 @@ export const ProgressBar = () => {
       color="primary"
       onClick={()=>nextStep()}
       >Next &nbsp; <ArrowRightOutlined /></Button> 
-      </Center>   
+    </Center>   
 
       <style jsx>{`
         .header {
@@ -305,8 +256,6 @@ export const ProgressBar = () => {
       `}</style>
     </div>
     
-  );
-};
-
-
+    );
+  };
 }

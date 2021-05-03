@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { Skeleton, Switch, Card, Avatar } from "antd";
-
 
 export const Content = styled.div`
   width: 100vw;
@@ -22,3 +20,5 @@ export const ImgBoxImg = styled.div`
   width: 100%;
   height: 100%;
 `;
+
+
