@@ -15,6 +15,7 @@ import StepConnector from '@material-ui/core/StepConnector';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import Check from '@material-ui/icons/Check';
+import { FontStyle } from "pages/dashboard/styled";
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -27,6 +28,7 @@ const useStyles = makeStyles((theme: Theme) =>
       width: 100,
       color: '#fd7351',
       border: 0,
+      fontFamily: "Nunito",
     },
     instructions: {
       marginTop: theme.spacing(1),
@@ -34,7 +36,6 @@ const useStyles = makeStyles((theme: Theme) =>
     },
   }),
 );
-
 const useQontoStepIconStyles = makeStyles({
   root: {
     color: '#eaeaf0',
@@ -122,8 +123,13 @@ const imgBoxVariants = {
 }
 
 
+function getSteps() {
+  return ['','', '','','',''];
+}
+
 export const ProgressBar = () => {
 
+  const steps = getSteps();
   const [toggle,setToggle] = useState(false);
 
   const toggler = () => {
@@ -165,25 +171,13 @@ export const ProgressBar = () => {
   else{
   return (
     <div className={classes.root}>
+      <h1>Algebra</h1>
       <Stepper connector={<QontoConnector />} activeStep={activeStep}>
-      <Step>
-          <StepLabel StepIconComponent={QontoStepIcon}></StepLabel>
-        </Step>
-        <Step>
-          <StepLabel StepIconComponent={QontoStepIcon}></StepLabel>
-        </Step>
-        <Step>
-          <StepLabel StepIconComponent={QontoStepIcon}></StepLabel>
-        </Step>
-        <Step>
-          <StepLabel StepIconComponent={QontoStepIcon}></StepLabel>
-        </Step>
-        <Step>
-          <StepLabel StepIconComponent={QontoStepIcon}></StepLabel>
-        </Step>
-        <Step>
-          <StepLabel StepIconComponent={QontoStepIcon}></StepLabel>
-        </Step>
+      {steps.map((label) => (
+          <Step key={label}>
+            <StepLabel StepIconComponent={QontoStepIcon}>{label}</StepLabel>
+          </Step>
+        ))}
       </Stepper>
       <Switch checkedChildren="Video Tutorial" unCheckedChildren="Flash Card" style={{backgroundColor:"#fd7351", marginLeft:20, marginBottom:20,display:"flex"}} onClick={toggler}/>
       {toggle ? <div>
