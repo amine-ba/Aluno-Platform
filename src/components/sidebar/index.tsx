@@ -7,7 +7,7 @@ import {
   UploadOutlined,
 } from "@ant-design/icons";
 import { useState } from "react";
-import {Logo,Trigger} from "./styled";
+import {Logo,Trigger,ChangeColor} from "./styled";
 
 
 const { Header, Sider, Content } = Layout;

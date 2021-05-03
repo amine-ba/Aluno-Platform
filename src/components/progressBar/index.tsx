@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { Skeleton, Switch, Card, Avatar } from "antd";
-import {ArrowRightOutlined,ArrowLeftOutlined} from "@ant-design/icons";
+import {ArrowRightOutlined,ArrowLeftOutlined,CaretLeftOutlined} from "@ant-design/icons";
 import {Center, Wrapper,Content,ImgBox,ImgBoxImg,ParentSection,Center2} from "./styled";
 import Stepper from "@material-ui/core/Stepper"
 import Step from "@material-ui/core/Step"
@@ -160,7 +160,7 @@ export const ProgressBar = () => {
         <Center>
           <Button
             className={classes.button}
-            variant="outlined"
+            variant="text"
             color="primary"
             onClick={()=>nextStep()}
             >Start</Button> 
@@ -171,7 +171,7 @@ export const ProgressBar = () => {
   else{
   return (
     <div className={classes.root}>
-      <h1>Algebra</h1>
+      <h1 className="header"><Button href={'./dashboard'} type="link"><CaretLeftOutlined style={{ fontSize: '25px', color: '#fd7351' }}/></Button>  Algebra</h1>
       <Stepper connector={<QontoConnector />} activeStep={activeStep}>
       {steps.map((label) => (
           <Step key={label}>
@@ -283,7 +283,7 @@ export const ProgressBar = () => {
       <Button
       className={classes.button}
       disabled={activeStep === 0}
-      variant="outlined"
+      variant="text"
       color="primary"
       onClick={()=>previousStep()}
       ><ArrowLeftOutlined/>&nbsp;Previous 
@@ -292,13 +292,21 @@ export const ProgressBar = () => {
       <Button
       className={classes.button}
       disabled={activeStep === 5}
-      variant="outlined"
+      variant="text"
       color="primary"
       onClick={()=>nextStep()}
       >Next &nbsp; <ArrowRightOutlined /></Button> 
       </Center>   
+
+      <style jsx>{`
+        .header {
+          font-size: 30px;
+        }
+      `}</style>
     </div>
     
   );
 };
+
+
 }
