@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { Skeleton, Switch, Card, Avatar } from "antd";
-import {Center, Wrapper,Content,ImgBox,ImgBoxImg,ParentSection,Center2,ButtonContainer} from "./styled";
+import {ArrowRightOutlined,ArrowLeftOutlined} from "@ant-design/icons";
+import {Center, Wrapper,Content,ImgBox,ImgBoxImg,ParentSection,Center2} from "./styled";
 import Stepper from "@material-ui/core/Stepper"
 import Step from "@material-ui/core/Step"
 import StepLabel from "@material-ui/core/StepLabel"
@@ -14,7 +15,6 @@ import StepConnector from '@material-ui/core/StepConnector';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import Check from '@material-ui/icons/Check';
-import {ArrowRightOutlined,ArrowLeftOutlined} from "@ant-design/icons";
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -27,7 +27,6 @@ const useStyles = makeStyles((theme: Theme) =>
       width: 100,
       color: '#fd7351',
       border: 0,
-
     },
     instructions: {
       marginTop: theme.spacing(1),
@@ -47,15 +46,15 @@ const useQontoStepIconStyles = makeStyles({
     color: '#fd7351',
   },
   circle: {
-    width: 8,
-    height: 8,
+    width: 20,
+    height: 20,
     borderRadius: '50%',
     backgroundColor: 'currentColor',
   },
   completed: {
     color: '#fd7351',
     zIndex: 1,
-    fontSize: 18,
+    fontSize: 25,
   },
 });
 
@@ -288,7 +287,6 @@ export const ProgressBar = () => {
       
     <Center>
       <Button
-      type="ButtonContainer"
       className={classes.button}
       disabled={activeStep === 0}
       variant="outlined"
@@ -298,7 +296,6 @@ export const ProgressBar = () => {
       </Button> 
 
       <Button
-      type="ButtonContainer"
       className={classes.button}
       disabled={activeStep === 5}
       variant="outlined"
