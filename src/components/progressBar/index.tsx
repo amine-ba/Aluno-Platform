@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { Switch } from "antd";
-import {ArrowRightOutlined,ArrowLeftOutlined,CaretLeftOutlined} from "@ant-design/icons";
+import {RightCircleOutlined,LeftCircleOutlined,CaretLeftOutlined} from "@ant-design/icons";
 import {Center, Wrapper,Content,Center2} from "./styled";
 import Stepper from "@material-ui/core/Stepper"
 import Step from "@material-ui/core/Step"
@@ -162,7 +162,7 @@ export const ProgressBar = () => {
   else{
   return (
     <div className={classes.root}>
-      <h1 className="header"><Button href={'./dashboard'} type="link"><CaretLeftOutlined style={{ fontSize: '25px', color: '#fd7351' }}/></Button>  Algebra</h1>
+      <h1 className="header"><Button href={'./dashboard'} type="link"><LeftCircleOutlined style={{fontSize:"25px",color: '#fd7351'}}/></Button>  Algebra</h1>
       <Stepper connector={<QontoConnector />} activeStep={activeStep}>
       {steps.map((label) => (
           <Step key={label}>
@@ -170,7 +170,7 @@ export const ProgressBar = () => {
           </Step>
         ))}
       </Stepper>
-      <Switch checkedChildren="Video Tutorial" unCheckedChildren="Flash Card" style={{backgroundColor:"#fd7351", marginLeft:20, marginBottom:20,display:"flex"}} onClick={toggler}/>
+      <Switch checkedChildren="Video Tutorial" unCheckedChildren="Flash Card" style={{backgroundColor:"#fd7351", marginLeft:20, marginBottom:20,display:"flex",float:"left"}} onClick={toggler}/>
       {toggle ? <div>
       <Wrapper>
         <Content>
@@ -237,7 +237,7 @@ export const ProgressBar = () => {
       variant="text"
       color="primary"
       onClick={()=>previousStep()}
-      ><ArrowLeftOutlined/>&nbsp;Previous 
+      ><LeftCircleOutlined style={{fontSize:20}}/>&nbsp;Previous 
       </Button> 
 
       <Button
@@ -246,7 +246,7 @@ export const ProgressBar = () => {
       variant="text"
       color="primary"
       onClick={()=>nextStep()}
-      >Next &nbsp; <ArrowRightOutlined /></Button> 
+      >Next &nbsp; <RightCircleOutlined style={{fontSize:20}}/></Button> 
     </Center>   
 
       <style jsx>{`
@@ -254,8 +254,7 @@ export const ProgressBar = () => {
           font-size: 30px;
         }
       `}</style>
-    </div>
-    
+    </div>    
     );
   };
 }

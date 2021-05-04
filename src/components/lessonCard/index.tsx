@@ -47,9 +47,9 @@ export const LessonCard = () => {
       <ImgBox>
       <ImgBoxImg>
       <h1 style={{color:"#fd7351"}}>Description</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quis cumque voluptas illo aliquid rem error quidem optio,</p>
+      <p>Lorem ipsum dolor sit amet <span style={{fontWeight:"bold"}}>consectetur</span> adipisicing elit. Quam quis cumque <span style={{fontWeight:"bold"}}>voluptas</span> illo aliquid rem error quidem optio,</p>
       <br></br>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quis cumque voluptas illo aliquid rem error quidem optio,adipisicing elit. Quam quis cumque voluptas illo aliquid rem error quidem optio</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quis cumque voluptas illo <span style={{fontWeight:"bold"}}>aliquid</span> rem error quidem optio,adipisicing elit. Quam quis cumque voluptas illo aliquid rem error quidem optio</p>
       <br></br>
       <h1 style={{color:"#fd7351"}}>Formula</h1>
       <p>ax2 + bx + c = 0</p>      
