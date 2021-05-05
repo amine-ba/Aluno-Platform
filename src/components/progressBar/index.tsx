@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       width: '100%',
+      paddingTop:"50px",
     },
     button: {
       marginRight: theme.spacing(5),
@@ -162,7 +163,7 @@ export const ProgressBar = () => {
   else{
   return (
     <div className={classes.root}>
-      <h1 className="header"><Button href={'./dashboard'} type="link"><LeftCircleOutlined style={{fontSize:"25px",color: '#fd7351'}}/></Button>  Algebra</h1>
+      <h1 className="header"><Button href={'./dashboard'} type="link"><LeftCircleOutlined style={{fontSize:"25px",color: '#fd7351'}}/></Button> <span style={{fontWeight:"bold"}}>Algebra</span> </h1>
       <Stepper connector={<QontoConnector />} activeStep={activeStep}>
       {steps.map((label) => (
           <Step key={label}>
@@ -251,7 +252,7 @@ export const ProgressBar = () => {
 
       <style jsx>{`
         .header {
-          font-size: 30px;
+          font-size: 25px;
         }
       `}</style>
     </div>    

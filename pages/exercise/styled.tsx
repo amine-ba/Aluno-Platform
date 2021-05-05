@@ -20,6 +20,7 @@ export const StyledContent = styled(Content)`
   border-radius:15px;
   width: 60%;
   height:100%;
+  padding-left:100px;
 `;
 
 

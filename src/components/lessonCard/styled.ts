@@ -15,7 +15,9 @@ export const Content = styled.div`
 
 export const ImgBox = styled.div`
   width: 500px;
-  height: 370px;
+  height: 380px;
+  padding-left:150px;
+  padding-top:10px;
 `;
 
 export const ImgBoxImg = styled.div`

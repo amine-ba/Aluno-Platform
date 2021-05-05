@@ -14,11 +14,11 @@ export const Center2 = styled.div`
 
 
 export const Wrapper = styled.div`
-  width: 100%;
+  width: 90%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: c enter; */
   align-items: center;
   overflow:hidden;
   border: 2px solid gray;
