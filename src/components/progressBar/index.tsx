@@ -164,14 +164,14 @@ export const ProgressBar = () => {
   return (
     <div className={classes.root}>
       <h1 className="header"><Button href={'./dashboard'} type="link"><LeftCircleOutlined style={{fontSize:"25px",color: '#fd7351'}}/></Button> <span style={{fontWeight:"bold"}}>Algebra</span> </h1>
-      <Stepper connector={<QontoConnector />} activeStep={activeStep}>
+      <Stepper style={{width:850}} connector={<QontoConnector />} activeStep={activeStep}>
       {steps.map((label) => (
           <Step key={label}>
             <StepLabel StepIconComponent={QontoStepIcon}>{label}</StepLabel>
           </Step>
         ))}
       </Stepper>
-      <Switch checkedChildren="Video Tutorial" unCheckedChildren="Flash Card" style={{backgroundColor:"#fd7351", marginLeft:20, marginBottom:20,display:"flex",float:"left"}} onClick={toggler}/>
+      {/* <Switch checkedChildren="Video Tutorial" unCheckedChildren="Flash Card" style={{backgroundColor:"#fd7351", marginLeft:20, marginBottom:20,display:"flex",float:"left"}} onClick={toggler}/>
       {toggle ? <div>
       <Wrapper>
         <Content>
@@ -201,7 +201,7 @@ export const ProgressBar = () => {
       </Content>
     </Wrapper>
     </div>
-    : <div>
+    : <div> */}
     <Wrapper>
         <Content>
           {activeStep === 1 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
@@ -229,8 +229,8 @@ export const ProgressBar = () => {
           </motion.div>}
       </Content>
     </Wrapper>
-    </div>
-    } 
+    {/* </div>
+    }  */}
     <Center>
       <Button
       className={classes.button}

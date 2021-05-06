@@ -3,7 +3,7 @@ import { Skeleton, Switch, Card, Avatar} from "antd";
 
 export const Center = styled.div`
   margin-top:3% !important;
-  margin-left:40%;
+  margin-left:35%;
 `;
 
 export const Center2 = styled.div`
