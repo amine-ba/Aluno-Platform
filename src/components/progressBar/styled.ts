@@ -18,7 +18,7 @@ export const Wrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  /* justify-content: c enter; */
+  justify-content: c enter;
   align-items: center;
   overflow:hidden;
   border: 2px solid gray;
@@ -32,7 +32,7 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 33%;
+  margin-left:27%;
   margin-top:10px;
   margin-bottom:10px;
 `;

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { Switch } from "antd";
-import {RightCircleOutlined,LeftCircleOutlined,CaretLeftOutlined} from "@ant-design/icons";
+import {RightCircleOutlined,LeftCircleOutlined,CaretLeftOutlined,SearchOutlined,BellOutlined,UserOutlined} from "@ant-design/icons";
 import {Center, Wrapper,Content,Center2} from "./styled";
 import Stepper from "@material-ui/core/Stepper"
 import Step from "@material-ui/core/Step"
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       width: '100%',
-      paddingTop:"50px",
+      paddingTop:"20px",
     },
     button: {
       marginRight: theme.spacing(5),
@@ -163,7 +163,8 @@ export const ProgressBar = () => {
   else{
   return (
     <div className={classes.root}>
-      <h1 className="header"><Button href={'./dashboard'} type="link"><LeftCircleOutlined style={{fontSize:"25px",color: '#fd7351'}}/></Button> <span style={{fontWeight:"bold"}}>Algebra</span> </h1>
+      <h1 className="header"><Button href={'./dashboard'} type="link"><LeftCircleOutlined style={{fontSize:"25px",color: '#fd7351'}}/></Button> <span style={{fontWeight:"bold"}}>Algebra</span>
+      <Button style= {{ fontSize:"25px",color: '#fd7351',display:"flex",float:"right",marginRight:77}}href={'./dashboard'} type="link"> <UserOutlined  /></Button><Button style= {{ fontSize:"25px",color: '#fd7351',display:"flex",float:"right"}}href={'./dashboard'} type="link"><BellOutlined /></Button><Button style= {{ fontSize:"25px",color: '#fd7351',display:"flex",float:"right"}}href={'./dashboard'} type="link"><SearchOutlined /></Button></h1>
       <Stepper style={{width:850}} connector={<QontoConnector />} activeStep={activeStep}>
       {steps.map((label) => (
           <Step key={label}>
@@ -238,7 +239,7 @@ export const ProgressBar = () => {
       variant="text"
       color="primary"
       onClick={()=>previousStep()}
-      ><LeftCircleOutlined style={{fontSize:20}}/>&nbsp;Previous 
+      ><LeftCircleOutlined style={{marginBottom: 3, marginRight: 5,fontSize:30}}/>&nbsp;Previous 
       </Button> 
 
       <Button
@@ -247,7 +248,7 @@ export const ProgressBar = () => {
       variant="text"
       color="primary"
       onClick={()=>nextStep()}
-      >Next &nbsp; <RightCircleOutlined style={{fontSize:20}}/></Button> 
+      >Next &nbsp; <RightCircleOutlined style={{marginBottom: 3, marginLeft: 5,fontSize:30}}/></Button> 
     </Center>   
 
       <style jsx>{`

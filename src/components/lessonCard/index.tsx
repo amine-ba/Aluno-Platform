@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { Skeleton, Switch, Card, Avatar } from "antd";
-import {Center, Wrapper,Content,ImgBox,ImgBoxImg,ParentSection,Center2,ImgBox2,Wrapper2} from "./styled";
+import {Center, Wrapper,Content,ImgBox,ImgBoxImg,ParentSection,Center2,ImgBox2,Wrapper2,Wrapper3} from "./styled";
 import Stepper from "@material-ui/core/Stepper"
 import Step from "@material-ui/core/Step"
 import StepLabel from "@material-ui/core/StepLabel"
@@ -65,14 +65,14 @@ export const LessonCard = () => {
   return (
       <ImgBox>
       <ImgBoxImg>
-      <Switch checkedChildren="Video Tutorial" unCheckedChildren="Flash Card" style={{backgroundColor:"#fd7351", marginLeft: 200, marginTop:5,marginBottom: 20, display:"flex",float:"right"}} onClick={toggler}/>
+      <Switch unCheckedChildren="Video Tutorial" checkedChildren="Flash Card" style={{backgroundColor:"#fd7351",marginLeft: 200, marginRight: 80, marginTop:5,marginBottom: 20, display:"flex",float:"right"}} onClick={toggler}/>
       {toggle ? <div>
           {
-            <div>
-          <h1 style={{color:"#fd7351"}}>Video Tutorial on Algebraic Manipulation</h1>
+          <div>
+          <h1 style={{fontWeight:"bold",color:"#fd7351"}}>Video Tutorial on Algebraic Manipulation</h1>
           <ImgBox2>
           <motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
-          <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
+          <ReactPlayer style={{borderRadius:10,overflow:"hidden"}} url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
           </motion.div>
           </ImgBox2> 
           </div>
@@ -99,14 +99,16 @@ export const LessonCard = () => {
           </motion.div>} */}
     </div>
     : <div>
-      <h1 style={{color:"#fd7351"}}>Algebraic Manipulation </h1>
+      <h1 style={{color:"#fd7351",fontWeight:"bold"}}>Algebraic Manipulation </h1>
+      <Wrapper3>
       <p>Lorem ipsum dolor sit amet <span style={{fontWeight:"bold"}}>consectetur</span> adipisicing elit. Quam quis cumque <span style={{fontWeight:"bold"}}>voluptas</span> illo aliquid.</p>
       <br></br>
        <p>rem error quidem optio,</p>
       <br></br>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quis cumque voluptas illo <span style={{fontWeight:"bold"}}>aliquid</span> rem error quidem optio,adipisicing elit. Quam quis cumque voluptas illo aliquid rem error quidem optio</p>
       <br></br>
-      <h1 style={{color:"#fd7351"}}>Formula</h1>
+      <h1 style={{fontWeight:"bold",color:"#fd7351"}}>Formula</h1>
+      </Wrapper3>
       <Wrapper2>
       <p style={{padding:20}}>ax2 + bx + c = 0</p>   
       </Wrapper2>
