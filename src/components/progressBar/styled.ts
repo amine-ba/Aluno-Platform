@@ -3,7 +3,7 @@ import { Skeleton, Switch, Card, Avatar} from "antd";
 
 export const Center = styled.div`
   margin-top:3% !important;
-  margin-left:35%;
+  margin-left:40%;
 `;
 
 export const Center2 = styled.div`
@@ -21,9 +21,10 @@ export const Wrapper = styled.div`
   justify-content: c enter;
   align-items: center;
   overflow:hidden;
-  border: 2px solid gray;
-  border-radius: 20px;
+  border: 1px solid #DDE2FC;
+  border-radius: 10px;
   background-color: #f8f9fe;
+  margin-left:4%;
 `;
 
 export const Content = styled.div`
@@ -32,7 +33,8 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left:27%;
+  margin-left:15%;
   margin-top:10px;
-  margin-bottom:10px;
+  margin-bottom:50px;
+  color:#111847;
 `;

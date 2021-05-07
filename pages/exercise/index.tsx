@@ -5,7 +5,7 @@ import { ProgressBar } from "@components/progressBar";
 
 
 import React, { useState } from "react";
-import { StyledContent, StyledLayout,ParentSection,FontStyle} from "./styled";
+import { StyledContent, StyledLayout,ParentSection,FontStyle,FontStyle2} from "./styled";
 import withRouter from "next/dist/client/with-router";
 
 const { Header, Sider, Content } = Layout;
@@ -15,14 +15,14 @@ const Exercise = () => {
   const [collapsed, setCollapsed] = useState(false);
 
   return (
-    <FontStyle>
+    <FontStyle2>
     <Layout>
       <Sidebar/>
       <StyledContent>
         <ProgressBar></ProgressBar>
       </StyledContent>
     </Layout>
-    </FontStyle>
+    </FontStyle2>
   );
 };
 

@@ -6012,6 +6012,11 @@ react-fast-compare@^3.0.1:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
   integrity sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==
 
+react-icons@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.2.0.tgz#6dda80c8a8f338ff96a1851424d63083282630d0"
+  integrity sha512-rmzEDFt+AVXRzD7zDE21gcxyBizD/3NqjbX6cmViAgdqfJ2UiLer8927/QhhrXQV7dEj/1EGuOTPp7JnLYVJKQ==
+
 react-is@16.13.1, react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -7268,6 +7273,11 @@ typeface-nunito@^1.1.13:
   version "1.1.13"
   resolved "https://registry.yarnpkg.com/typeface-nunito/-/typeface-nunito-1.1.13.tgz#a57cbd7ff3e74ed99fe60d3361971c61747d130c"
   integrity sha512-S7tN6pMnJapUxRDNa/RPXtcsxJC0KkBNPFOfGpHCkatVLm+6ltMedgeGtr1lPZsGFXGN890TZmE18bq2pdsmKw==
+
+typeface-poppins@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-poppins/-/typeface-poppins-1.1.13.tgz#a80b6f14a2a70624eb2eb833fe5559507a8f5651"
+  integrity sha512-VLNaET8kK7M3gPGjtKhr4/Iw6aseM2FLdiEGevlqXWD9b8QlzqZC4ro7sP78L9HJnOo2SUVvwJUeCn82gBcNqw==
 
 typescript@^4.1.3:
   version "4.2.4"

@@ -14,13 +14,16 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import Check from '@material-ui/icons/Check';
 import { VideoCard } from "@components/videoCard";
+import { FiArrowRightCircle,FiArrowLeftCircle } from 'react-icons/fi';
+import { RiArrowLeftCircleFill,RiArrowRightCircleFill } from 'react-icons/ri';
+
 
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       width: '100%',
-      paddingTop:"20px",
+      marginTop:"20px",
     },
     button: {
       marginRight: theme.spacing(5),
@@ -45,15 +48,15 @@ const useQontoStepIconStyles = makeStyles({
     color: '#fd7351',
   },
   circle: {
-    width: 20,
-    height: 20,
+    width: 15,
+    height: 15,
     borderRadius: '50%',
     backgroundColor: 'currentColor',
   },
   completed: {
     color: '#fd7351',
     zIndex: 1,
-    fontSize: 25,
+    fontSize: 20,
   },
 });
 
@@ -95,7 +98,7 @@ const QontoConnector = withStyles({
   },
   line: {
     borderColor: '#eaeaf0',
-    borderTopWidth: 4,
+    borderTopWidth: 3,
     borderRadius: 1,
   },
 })(StepConnector);
@@ -163,9 +166,9 @@ export const ProgressBar = () => {
   else{
   return (
     <div className={classes.root}>
-      <h1 className="header"><Button href={'./dashboard'} type="link"><LeftCircleOutlined style={{fontSize:"25px",color: '#fd7351'}}/></Button> <span style={{fontWeight:"bold"}}>Algebra</span>
-      <Button style= {{ fontSize:"25px",color: '#fd7351',display:"flex",float:"right",marginRight:77}}href={'./dashboard'} type="link"> <UserOutlined  /></Button><Button style= {{ fontSize:"25px",color: '#fd7351',display:"flex",float:"right"}}href={'./dashboard'} type="link"><BellOutlined /></Button><Button style= {{ fontSize:"25px",color: '#fd7351',display:"flex",float:"right"}}href={'./dashboard'} type="link"><SearchOutlined /></Button></h1>
-      <Stepper style={{width:850}} connector={<QontoConnector />} activeStep={activeStep}>
+      <h1 className="header"><Button href={'./dashboard'} type="link"><FiArrowLeftCircle style={{color:"#FF886B", marginRight: 10,fontSize:25}}/></Button> <span style={{fontWeight:"600"}}>Algebra</span>
+      <Button style= {{ borderRadius: 10,fontSize:"20px",backgroundColor: '#ffdfd7',color:"#fe7755",display:"flex",float:"right",marginRight:65}}href={'./dashboard'} type="link"> <UserOutlined/></Button><Button style= {{ borderRadius: 10,backgroundColor:"#ffeeea", fontSize:"20px",color: '#fd7c5b',display:"flex",float:"right", marginLeft:20,marginRight:20}}href={'./dashboard'} type="link"><BellOutlined /></Button><Button style= {{ borderRadius: 10,fontSize:"20px",backgroundColor: '#e9eaf4',color:"#545da5",display:"flex",float:"right"}}href={'./dashboard'} type="link"><SearchOutlined /></Button></h1>
+      <Stepper style={{width:1030}} connector={<QontoConnector />} activeStep={activeStep}>
       {steps.map((label) => (
           <Step key={label}>
             <StepLabel StepIconComponent={QontoStepIcon}>{label}</StepLabel>
@@ -234,26 +237,32 @@ export const ProgressBar = () => {
     }  */}
     <Center>
       <Button
-      className={classes.button}
+      // className={classes.button}
+      style={{fontSize: 20,fontFamily:"Poppins", width:100,color:"gray",border:0,marginRight:20,textTransform:"capitalize",fontWeight:"500"}}
       disabled={activeStep === 0}
       variant="text"
-      color="primary"
+      // color="gray"
       onClick={()=>previousStep()}
-      ><LeftCircleOutlined style={{marginBottom: 3, marginRight: 5,fontSize:30}}/>&nbsp;Previous 
+      ><FiArrowLeftCircle style={{color:"gray", marginRight: 10,fontSize:30}}/>&nbsp;Prev 
       </Button> 
 
       <Button
       className={classes.button}
       disabled={activeStep === 5}
       variant="text"
+      style={{fontSize: 20,fontFamily:"Poppins",textTransform:"capitalize",fontWeight:"500"}}
       color="primary"
       onClick={()=>nextStep()}
-      >Next &nbsp; <RightCircleOutlined style={{marginBottom: 3, marginLeft: 5,fontSize:30}}/></Button> 
+      >Next<FiArrowRightCircle className="invertColors" style={{marginLeft: 15,fontSize:30}}/></Button> 
     </Center>   
 
       <style jsx>{`
         .header {
-          font-size: 25px;
+          font-size: 20px;
+          color:#111847;
+        }
+        .invertColors {
+          filter: invert(100%)!important;
         }
       `}</style>
     </div>    

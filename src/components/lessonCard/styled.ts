@@ -14,9 +14,9 @@ export const Content = styled.div`
 `;
 export const ImgBox2 = styled.div`
   width: 1000px;
-  height: 600px;
+  height: 400px;
   /* padding-left:50px; */
-  margin-right: 300px !important;
+  /* margin-right: 300px !important; */
 `;
 export const Wrapper2 = styled.div`
   width: 55%;
@@ -26,9 +26,10 @@ export const Wrapper2 = styled.div`
   /* justify-content: c enter; */
   /* align-items: center; */
   overflow:hidden;
-  border: 2px solid gray;
-  border-radius: 5px;
-  background-color: #f8f9fe;
+  border: 1px solid #DDE2FC;
+  border-radius: 3px;
+  background-color: #fff;
+  /* margin-bottom:7px; */
 `;
 
 export const Wrapper3 = styled.div`
@@ -39,10 +40,12 @@ export const Wrapper3 = styled.div`
   /* justify-content: c enter; */
   /* align-items: center; */
   overflow:hidden;
+  font-size:12px;
+  /* color:#8C91A9!important; */
 `;
 export const ImgBox = styled.div`
   width: 1000px;
-  height: 460px;
+  height: auto;
   padding-left:150px;
   padding-top:10px;
   margin-top:20px;
