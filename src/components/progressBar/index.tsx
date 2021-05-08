@@ -16,7 +16,7 @@ import Check from '@material-ui/icons/Check';
 import { VideoCard } from "@components/videoCard";
 import { FiArrowRightCircle,FiArrowLeftCircle } from 'react-icons/fi';
 import { RiArrowLeftCircleFill,RiArrowRightCircleFill } from 'react-icons/ri';
-
+import { IoArrowForwardCircle,IoArrowBackCircle} from 'react-icons/io5';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -26,8 +26,8 @@ const useStyles = makeStyles((theme: Theme) =>
       marginTop:"20px",
     },
     button: {
-      marginRight: theme.spacing(5),
-      width: 100,
+      marginRight: theme.spacing(1),
+      width: 130,
       color: '#fd7351',
       border: 0,
     },
@@ -238,12 +238,12 @@ export const ProgressBar = () => {
     <Center>
       <Button
       // className={classes.button}
-      style={{fontSize: 20,fontFamily:"Poppins", width:100,color:"gray",border:0,marginRight:20,textTransform:"capitalize",fontWeight:"500"}}
+      style={{width:130, fontSize: 20,fontFamily:"Poppins",color:"#747aa1",border:0,textTransform:"capitalize",fontWeight:"500"}}
       disabled={activeStep === 0}
       variant="text"
       // color="gray"
       onClick={()=>previousStep()}
-      ><FiArrowLeftCircle style={{color:"gray", marginRight: 10,fontSize:30}}/>&nbsp;Prev 
+      ><FiArrowLeftCircle style={{color:"#d4d6e4", marginRight: 10,fontSize:"40px"}}/>&nbsp;Prev 
       </Button> 
 
       <Button
@@ -253,7 +253,7 @@ export const ProgressBar = () => {
       style={{fontSize: 20,fontFamily:"Poppins",textTransform:"capitalize",fontWeight:"500"}}
       color="primary"
       onClick={()=>nextStep()}
-      >Next<FiArrowRightCircle className="invertColors" style={{marginLeft: 15,fontSize:30}}/></Button> 
+      >Next<IoArrowForwardCircle className="invertColors" style={{marginLeft: 15,fontSize:"40px"}}/></Button> 
     </Center>   
 
       <style jsx>{`

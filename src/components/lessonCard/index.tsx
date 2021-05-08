@@ -61,9 +61,21 @@ export const LessonCard = () => {
      }
    }
 
+   const [switchIcon, setSwitchIcon] = useState(<PlayCircleOutlined style={{paddingLeft:5,paddingRight:5,fontSize:20}}/>)
+   {/* <PlayCircleOutlined /> */}
+   {/* <EyeOutlined /> */}
+     function handleClick2() {
+        if (switchIcon ===<PlayCircleOutlined style={{paddingLeft:5,paddingRight:5,fontSize:20}}/>) {
+           setSwitchIcon(<EyeOutlined style={{paddingLeft:5,paddingRight:5,fontSize:20}}/>)
+        } else {
+           setSwitchIcon(<PlayCircleOutlined style={{paddingLeft:5,paddingRight:5,fontSize:20}}/>)
+        }
+      }
+
    function allFun(){
      toggler();
      handleClick();
+     handleClick2();
    }
  
 
@@ -86,11 +98,11 @@ export const LessonCard = () => {
       <ImgBox>
       <ImgBoxImg>
       {/* <Switch unCheckedChildren="Video Tutorial" checkedChildren="Flash Card" style={{backgroundColor:"#fd7351",marginLeft: 200, marginRight: 80, marginTop:5,marginBottom: 20, display:"flex",float:"right"}} onClick={toggler}/> */}
-      <Button style={{borderRadius: 20,fontFamily: "Poppins", backgroundColor:"#FF886B",marginLeft: 200,marginTop:5,marginBottom: 20, display:"flex",float:"right", color:"#fff",fontSize:10,fontWeight:"bold",paddingRight:20}}  onClick={()=> allFun()}><PlayCircleOutlined style={{paddingLeft:5,paddingRight:5,fontSize:20}}/> &nbsp; {switchButton}</Button>
+      <Button style={{borderRadius: 20,fontFamily: "Poppins", backgroundColor:"#FF886B",marginLeft: 200,marginTop:5,marginBottom: 20, display:"flex",float:"right", color:"#fff",fontSize:10,fontWeight:"bold",paddingRight:20}}  onClick={()=> allFun()}>{switchIcon} &nbsp; {switchButton}</Button>
       {toggle ? <div>
           {
           <div>
-          <h1 style={{fontSize:17,fontWeight:"bold",color:"#fd7351"}}>Video Tutorial</h1>
+          <h1 style={{fontSize:17,fontWeight:"600",color:"#fd7351"}}>Video Tutorial</h1>
           <ImgBox2>
           <motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
           <ReactPlayer style={{borderRadius:10,overflow:"hidden"}} url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
