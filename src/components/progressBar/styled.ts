@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Skeleton, Switch, Card, Avatar} from "antd";
 
 export const Center = styled.div`
   margin-top:3% !important;
@@ -38,3 +37,15 @@ export const Content = styled.div`
   margin-bottom:50px;
   color:#111847;
 `;
+
+export const IconFormat = styled.a`
+  padding:10;
+  border-radius:9;
+  font-size:"20px";  
+  display:"flex";
+  float:"right";
+  background-color: '#ffdfd7';
+  color:"#fe7755";
+  margin-right:65;
+`;
+

@@ -1,7 +1,6 @@
 import React, {useState} from "react";
-import { Switch } from "antd";
-import {RightCircleOutlined,LeftCircleOutlined,CaretLeftOutlined,SearchOutlined,BellOutlined,UserOutlined} from "@ant-design/icons";
-import {Center, Wrapper,Content,Center2} from "./styled";
+import {SearchOutlined,BellOutlined,UserOutlined} from "@ant-design/icons";
+import {Center, Wrapper,Content,Center2,IconFormat} from "./styled";
 import Stepper from "@material-ui/core/Stepper"
 import Step from "@material-ui/core/Step"
 import StepLabel from "@material-ui/core/StepLabel"
@@ -13,11 +12,8 @@ import StepConnector from '@material-ui/core/StepConnector';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import Check from '@material-ui/icons/Check';
-import { VideoCard } from "@components/videoCard";
-import { FiArrowRightCircle,FiArrowLeftCircle } from 'react-icons/fi';
-import { RiArrowLeftCircleFill,RiArrowRightCircleFill } from 'react-icons/ri';
-import { IoArrowForwardCircle,IoArrowBackCircle} from 'react-icons/io5';
-
+import { FiArrowLeftCircle } from 'react-icons/fi';
+import { IoArrowForwardCircle} from 'react-icons/io5';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -30,6 +26,19 @@ const useStyles = makeStyles((theme: Theme) =>
       width: 130,
       color: '#fd7351',
       border: 0,
+      fontSize: 20,
+      fontFamily:"Poppins",
+      textTransform:"capitalize",
+      fontWeight:"500",
+    },
+    button2: {
+      width:130, 
+      fontSize: 20,
+      fontFamily:"Poppins",
+      color:"#747aa1",
+      border:0,
+      textTransform:"capitalize",
+      fontWeight:"500",
     },
     instructions: {
       marginTop: theme.spacing(1),
@@ -81,6 +90,9 @@ QontoStepIcon.propTypes = {
 };
 
 const QontoConnector = withStyles({
+  root: {
+    width:"110%",
+  },
   alternativeLabel: {
     top: 10,
     left: 'calc(-50% + 16px)',
@@ -91,6 +103,9 @@ const QontoConnector = withStyles({
       borderColor: '#fd7351',
     },
   },
+  horizontal: {
+    marginLeft: 10, // half icon
+  },
   completed: {
     '& $line': {
       borderColor: '#fd7351',
@@ -100,7 +115,11 @@ const QontoConnector = withStyles({
     borderColor: '#eaeaf0',
     borderTopWidth: 3,
     borderRadius: 1,
+    // width: "130%",
   },
+  // lineHorizontal: {
+
+  // },
 })(StepConnector);
 
 const imgBoxVariants = {
@@ -116,7 +135,6 @@ const imgBoxVariants = {
     }
   }
 }
-
 
 function getSteps() {
   return ['','', '','','',''];
@@ -167,7 +185,7 @@ export const ProgressBar = () => {
   return (
     <div className={classes.root}>
       <h1 className="header"><Button href={'./dashboard'} type="link"><FiArrowLeftCircle style={{color:"#FF886B", marginRight: 10,fontSize:25}}/></Button> <span style={{fontWeight:"600"}}>Algebra</span>
-      <Button style= {{ borderRadius: 10,fontSize:"20px",backgroundColor: '#ffdfd7',color:"#fe7755",display:"flex",float:"right",marginRight:65}}href={'./dashboard'} type="link"> <UserOutlined/></Button><Button style= {{ borderRadius: 10,backgroundColor:"#ffeeea", fontSize:"20px",color: '#fd7c5b',display:"flex",float:"right", marginLeft:20,marginRight:20}}href={'./dashboard'} type="link"><BellOutlined /></Button><Button style= {{ borderRadius: 10,fontSize:"20px",backgroundColor: '#e9eaf4',color:"#545da5",display:"flex",float:"right"}}href={'./dashboard'} type="link"><SearchOutlined /></Button></h1>
+      <a style= {{ padding:10,borderRadius:9,fontSize:"20px",backgroundColor: '#ffdfd7',color:"#fe7755",display:"flex",float:"right",marginRight:65}} href="./dashboard"> <UserOutlined/></a><a style= {{  padding:10,borderRadius:9,backgroundColor:"#ffeeea", fontSize:"20px",color: '#fd7c5b',display:"flex",float:"right", marginLeft:20,marginRight:20}} href="./dashboard"><BellOutlined /></a><a style= {{ padding:10,borderRadius:9,fontSize:"20px",backgroundColor: '#e9eaf4',color:"#545da5",display:"flex",float:"right"}}href="./dashboard"><SearchOutlined /></a></h1>
       <Stepper style={{width:1030}} connector={<QontoConnector />} activeStep={activeStep}>
       {steps.map((label) => (
           <Step key={label}>
@@ -175,37 +193,6 @@ export const ProgressBar = () => {
           </Step>
         ))}
       </Stepper>
-      {/* <Switch checkedChildren="Video Tutorial" unCheckedChildren="Flash Card" style={{backgroundColor:"#fd7351", marginLeft:20, marginBottom:20,display:"flex",float:"left"}} onClick={toggler}/>
-      {toggle ? <div>
-      <Wrapper>
-        <Content>
-          {activeStep === 1 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
-            <VideoCard></VideoCard>     
-          </motion.div>}
-
-          {activeStep === 2 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
-            <VideoCard></VideoCard>     
-          </motion.div>}
-
-          {activeStep === 3 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
-            <VideoCard></VideoCard>      
-          </motion.div>}
-
-          {activeStep === 4 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
-            <VideoCard></VideoCard>      
-          </motion.div>}
-
-          {activeStep === 5 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
-            <VideoCard></VideoCard>      
-          </motion.div>}
-
-          {activeStep === 6 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
-            <VideoCard></VideoCard>
-          </motion.div>}
-      </Content>
-    </Wrapper>
-    </div>
-    : <div> */}
     <Wrapper>
         <Content>
           {activeStep === 1 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
@@ -233,15 +220,11 @@ export const ProgressBar = () => {
           </motion.div>}
       </Content>
     </Wrapper>
-    {/* </div>
-    }  */}
     <Center>
       <Button
-      // className={classes.button}
-      style={{width:130, fontSize: 20,fontFamily:"Poppins",color:"#747aa1",border:0,textTransform:"capitalize",fontWeight:"500"}}
+      className={classes.button2}
       disabled={activeStep === 0}
       variant="text"
-      // color="gray"
       onClick={()=>previousStep()}
       ><FiArrowLeftCircle style={{color:"#d4d6e4", marginRight: 10,fontSize:"40px"}}/>&nbsp;Prev 
       </Button> 
@@ -250,7 +233,6 @@ export const ProgressBar = () => {
       className={classes.button}
       disabled={activeStep === 5}
       variant="text"
-      style={{fontSize: 20,fontFamily:"Poppins",textTransform:"capitalize",fontWeight:"500"}}
       color="primary"
       onClick={()=>nextStep()}
       >Next<IoArrowForwardCircle className="invertColors" style={{marginLeft: 15,fontSize:"40px"}}/></Button> 
@@ -259,10 +241,7 @@ export const ProgressBar = () => {
       <style jsx>{`
         .header {
           font-size: 20px;
-          color:#111847;
-        }
-        .invertColors {
-          filter: invert(100%)!important;
+          color:#FD5E36;
         }
       `}</style>
     </div>    
