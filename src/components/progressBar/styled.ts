@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Center = styled.div`
   margin-top:3%;
-  margin-left:40%;
+  margin-left:30%;
 `;
 
 export const OpeningFormat = styled.div`
@@ -12,7 +12,7 @@ export const OpeningFormat = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  width: 90%;
+  width: 73%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -25,9 +25,10 @@ export const Wrapper = styled.div`
 `;
 
 export const Content = styled.div`
-  width: 100vw;
-  height: auto;
-  margin-left:15%;
+  width: ${props => props.Width};
+  height: ${props => props.Height};
+  /* margin-left:15%; */
+  margin-right:25%;
   margin-top:10px;
   margin-bottom:50px;
   color:#111847;

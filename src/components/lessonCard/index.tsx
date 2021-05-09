@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {ImgBox,Wrapper2,Wrapper3} from "./styled";
 import Button from "@material-ui/core/Button"
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import {motion} from 'framer-motion';
 import ReactPlayer from 'react-player'
 import {EyeOutlined,PlayCircleOutlined} from "@ant-design/icons";
@@ -67,7 +66,7 @@ export const LessonCard = () => {
 
   return (
       <ImgBox>
-      <Button style={{borderRadius: 20,fontFamily: "Poppins", backgroundColor:"#FF886B",marginLeft: 200,marginTop:5,marginBottom: 20, display:"flex",float:"right", color:"#fff",fontSize:10,fontWeight:"bold",paddingRight:20}}  onClick={()=> allFun()}>{switchIcon} &nbsp; {switchButton}</Button>
+      <Button style={{borderRadius: 20,fontFamily: "Poppins", backgroundColor:"#FF886B",marginTop:5,marginBottom: 20, display:"flex",float:"right", color:"#fff",fontSize:10,fontWeight:"bold",paddingRight:20}}  onClick={()=> allFun()}>{switchIcon} &nbsp; {switchButton}</Button>
       {toggle ? 
       <div>
           {

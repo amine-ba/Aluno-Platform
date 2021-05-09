@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Skeleton, Switch, Card, Avatar } from "antd";
 
 export const Wrapper2 = styled.div`
   width: 55%;
@@ -14,9 +13,9 @@ export const Wrapper3 = styled.div`
   font-size:12px;
 `;
 export const ImgBox = styled.div`
-  width: 1000px;
+  width: 130%;
   height: auto;
-  padding-left:150px;
+  /* padding-left:150px; */
   margin-top:30px;
 `;
 
