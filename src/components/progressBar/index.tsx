@@ -15,6 +15,21 @@ import Check from '@material-ui/icons/Check';
 import { FiArrowLeftCircle } from 'react-icons/fi';
 import { IoArrowForwardCircle} from 'react-icons/io5';
 
+
+const imgBoxVariants = {
+  hidden:{
+    x: 500,
+    opacity: 0
+  },
+  visible:{
+    x: 0,
+    opacity: 1,
+    transition:{
+      delay: 0.5, duration: 0.5
+    }
+  }
+}
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -181,17 +196,29 @@ export const ProgressBar = () => {
       </Stepper>
     <Wrapper>
         <Content>
-          {activeStep === 1 && <LessonCard></LessonCard>}
+          {activeStep === 1 && <motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
+          <LessonCard></LessonCard>
+          </motion.div>}
 
-          {activeStep === 2 && <LessonCard></LessonCard>}
+          {activeStep === 2 && <motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
+          <LessonCard></LessonCard>
+          </motion.div>}
 
-          {activeStep === 3 && <LessonCard></LessonCard>}
+          {activeStep === 3 && <motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
+          <LessonCard></LessonCard>
+          </motion.div>}
 
-          {activeStep === 4 && <LessonCard></LessonCard>}
+          {activeStep === 4 && <motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
+          <LessonCard></LessonCard>
+          </motion.div>}
 
-          {activeStep === 5 && <LessonCard></LessonCard>}
+          {activeStep === 5 && <motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
+          <LessonCard></LessonCard>
+          </motion.div>}
 
-          {activeStep === 6 && <LessonCard></LessonCard>}
+          {activeStep === 6 && <motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
+            <LessonCard></LessonCard>
+          </motion.div>}
       </Content>
     </Wrapper>
     <Center>

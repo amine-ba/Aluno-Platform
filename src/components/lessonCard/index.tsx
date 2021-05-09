@@ -6,24 +6,6 @@ import {motion} from 'framer-motion';
 import ReactPlayer from 'react-player'
 import {EyeOutlined,PlayCircleOutlined} from "@ant-design/icons";
 
-
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      width: '100%',
-      fontFamily:"Poppins",
-    },
-    button: {
-      marginRight: theme.spacing(5),
-      width: 100,
-    },
-    instructions: {
-      marginTop: theme.spacing(1),
-      marginBottom: theme.spacing(1),
-    },
-  }),
-);
-
 const imgBoxVariants = {
   hidden:{
     x: 500,
@@ -54,12 +36,12 @@ export const LessonCard = () => {
      }
    }
 
-   const [switchIcon, setSwitchIcon] = useState(<PlayCircleOutlined style={{paddingLeft:5,paddingRight:5,fontSize:20}}/>)
+   const [switchIcon, setSwitchIcon] = useState(<EyeOutlined style={{paddingLeft:5,paddingRight:5,fontSize:20}}/>)
      function handleClick2() {
-        if (switchIcon ===<PlayCircleOutlined style={{paddingLeft:5,paddingRight:5,fontSize:20}}/>) {
-           setSwitchIcon(<EyeOutlined style={{paddingLeft:5,paddingRight:5,fontSize:20}}/>)
-        } else {
+        if (switchIcon ===<EyeOutlined style={{paddingLeft:5,paddingRight:5,fontSize:20}}/>) {
            setSwitchIcon(<PlayCircleOutlined style={{paddingLeft:5,paddingRight:5,fontSize:20}}/>)
+        } else {
+           setSwitchIcon(<EyeOutlined style={{paddingLeft:5,paddingRight:5,fontSize:20}}/>)
         }
       }
 
@@ -69,7 +51,6 @@ export const LessonCard = () => {
      handleClick2();
    }
  
-  const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0)
 
   const nextStep = () => {
