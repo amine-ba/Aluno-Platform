@@ -1,18 +1,12 @@
-import { Layout, Menu,DatePicker, Space } from "antd";
-import { RecommendedPath } from "@components/recommendedPath";
+import { Layout } from "antd";
 import { Sidebar } from "@components/sidebar";
 import { ProgressBar } from "@components/progressBar";
-
-
-import React, { useState } from "react";
-import { StyledContent, StyledLayout,ParentSection,FontStyle,FontStyle2} from "./styled";
-import withRouter from "next/dist/client/with-router";
+import React from "react";
+import { StyledContent,FontStyle2} from "./styled";
 
 const { Header, Sider, Content } = Layout;
 
-
 const Exercise = () => {
-  const [collapsed, setCollapsed] = useState(false);
 
   return (
     <FontStyle2>

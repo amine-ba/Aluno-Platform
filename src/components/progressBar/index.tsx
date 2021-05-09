@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {SearchOutlined,BellOutlined,UserOutlined} from "@ant-design/icons";
-import {Center, Wrapper,Content,Center2,IconFormat} from "./styled";
+import {Center, Wrapper,Content,OpeningFormat} from "./styled";
 import Stepper from "@material-ui/core/Stepper"
 import Step from "@material-ui/core/Step"
 import StepLabel from "@material-ui/core/StepLabel"
@@ -122,20 +122,6 @@ const QontoConnector = withStyles({
   // },
 })(StepConnector);
 
-const imgBoxVariants = {
-  hidden:{
-    x: 500,
-    opacity: 0
-  },
-  visible:{
-    x: 0,
-    opacity: 1,
-    transition:{
-      delay: 0.5, duration: 0.5
-    }
-  }
-}
-
 function getSteps() {
   return ['','', '','','',''];
 }
@@ -167,9 +153,9 @@ export const ProgressBar = () => {
   if(activeStep === 0){
     return (
       <div>
-        <Center2>
+        <OpeningFormat>
           <h1>Click Start to proceed</h1>
-        </Center2>
+        </OpeningFormat>
         <Center>
           <Button
             className={classes.button}
@@ -195,29 +181,17 @@ export const ProgressBar = () => {
       </Stepper>
     <Wrapper>
         <Content>
-          {activeStep === 1 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
-            <LessonCard></LessonCard>
-          </motion.div>}
+          {activeStep === 1 && <LessonCard></LessonCard>}
 
-          {activeStep === 2 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
-            <LessonCard></LessonCard>
-          </motion.div>}
+          {activeStep === 2 && <LessonCard></LessonCard>}
 
-          {activeStep === 3 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
-            <LessonCard></LessonCard>   
-          </motion.div>}
+          {activeStep === 3 && <LessonCard></LessonCard>}
 
-          {activeStep === 4 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
-            <LessonCard></LessonCard>          
-          </motion.div>}
+          {activeStep === 4 && <LessonCard></LessonCard>}
 
-          {activeStep === 5 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
-            <LessonCard></LessonCard>        
-          </motion.div>}
+          {activeStep === 5 && <LessonCard></LessonCard>}
 
-          {activeStep === 6 &&<motion.div variants={imgBoxVariants} initial="hidden" animate="visible">
-            <LessonCard></LessonCard>         
-          </motion.div>}
+          {activeStep === 6 && <LessonCard></LessonCard>}
       </Content>
     </Wrapper>
     <Center>
@@ -237,7 +211,6 @@ export const ProgressBar = () => {
       onClick={()=>nextStep()}
       >Next<IoArrowForwardCircle className="invertColors" style={{marginLeft: 15,fontSize:"40px"}}/></Button> 
     </Center>   
-
       <style jsx>{`
         .header {
           font-size: 20px;

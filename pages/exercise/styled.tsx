@@ -12,24 +12,11 @@ export const FontStyle2 = styled.div`
   font-family:"Poppins",sans-serif!important;
 `;
 
-export const StyledLayout = styled(Layout)`
-  /* background: #f8f9fe; */
-  background: #fff;
-  `;
-
 export const StyledContent = styled(Content)`
   margin: 16px;
   padding: 24px;
   min-height: 500px;
-  /* background-color: #f3d7d0; */
   background: #fff;
   border-radius:15px;
-  width: 60%;
-  height:100%;
   padding-left:100px;
-`;
-
-
-export const ParentSection = styled(Content)`
-display: flex;
 `;
