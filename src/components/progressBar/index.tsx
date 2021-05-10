@@ -66,6 +66,13 @@ const useStyles = makeStyles((theme: Theme) =>
       marginTop: theme.spacing(1),
       marginBottom: theme.spacing(1),
     },
+    headerIcons: {
+      padding: 10,
+      borderRadius: 9,
+      fontSize: "20px",
+      display: "flex",
+      float: "right",
+    }
   })
 );
 const useQontoStepIconStyles = makeStyles({
@@ -132,7 +139,6 @@ const QontoConnector = withStyles({
     },
   },
   horizontal: {
-    // marginLeft: 1,
   },
   completed: {
     "& $line": {
@@ -234,15 +240,11 @@ export const ProgressBar = () => {
             <span style={{ color: "#111847", fontWeight: "600" }}>Algebra</span>
             <a
               style={{
-                padding: 10,
-                borderRadius: 9,
-                fontSize: "20px",
                 backgroundColor: "#ffdfd7",
                 color: "#fe7755",
-                display: "flex",
-                float: "right",
                 marginRight: 300,
               }}
+              className={classes.headerIcons}
               href="./dashboard"
             >
               {" "}
@@ -250,30 +252,22 @@ export const ProgressBar = () => {
             </a>
             <a
               style={{
-                padding: 10,
-                borderRadius: 9,
                 backgroundColor: "#ffeeea",
-                fontSize: "20px",
                 color: "#fd7c5b",
-                display: "flex",
-                float: "right",
                 marginLeft: 20,
                 marginRight: 20,
               }}
+              className={classes.headerIcons}
               href="./dashboard"
             >
               <BellOutlined />
             </a>
             <a
               style={{
-                padding: 10,
-                borderRadius: 9,
-                fontSize: "20px",
                 backgroundColor: "#e9eaf4",
                 color: "#545da5",
-                display: "flex",
-                float: "right",
               }}
+              className={classes.headerIcons}
               href="./dashboard"
             >
               <SearchOutlined />

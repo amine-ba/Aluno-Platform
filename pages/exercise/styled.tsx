@@ -14,9 +14,11 @@ export const FontStyle2 = styled.div`
 
 export const StyledContent = styled(Content)`
   /* margin: 16px; */
-  padding: 30px;
+  /* padding: 30px; */
   min-height: 500px;
   background: #fff;
   /* border-radius:15px; */
+  padding-top: 30px;
   padding-left: 100px;
+  overflow: hidden;
 `;

@@ -9,11 +9,11 @@ export const Wrapper2 = styled.div`
 `;
 
 export const Wrapper3 = styled.div`
-  width: 55%;
+  width: 70%;
   font-size:12px;
 `;
 export const ImgBox = styled.div`
-  width: 130%;
+  width: 138%;
   height: auto;
   /* padding-left:150px; */
   margin-top:30px;

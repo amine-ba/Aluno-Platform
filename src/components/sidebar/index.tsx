@@ -23,7 +23,7 @@ export const Sidebar = () => {
   return (
     <FontStyle2>
       <Sider
-        style={{ background: "#f8f9fe" }}
+        style={{ background: "#f8f9fe", overflow:"hidden"}}
         trigger={null}
         collapsible
         collapsed={collapsed}

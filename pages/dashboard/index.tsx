@@ -40,12 +40,9 @@ const Dashboard = () => {
           <SiteLayoutBackground />
           <ParentSection>
             <StyledContent>
-              {/* <h1 style={{paddingLeft:5}}>Today's Plan <BookOutlined style={{color: "#fff"}} /></h1> */}
-              {/* <DatePicker style={{borderRadius:15, width:400}}onChange={onChange} /> */}
               <RecommendedPath />
             </StyledContent>
             <StyledBadgeContent>
-              {/* <ParentSection> */}
               <BadgeItem
                 icon={"./logo.png"}
                 title={"Average Score"}
@@ -58,10 +55,8 @@ const Dashboard = () => {
                 color={"#f0592c"}
                 achievement={"7"}
               />
-              {/* </ParentSection> */}
             </StyledBadgeContent>
           </ParentSection>
-          {/* <StyledCalendarContent><Timetable/></StyledCalendarContent> */}
         </StyledLayout>
       </Layout>
     </FontStyle>
