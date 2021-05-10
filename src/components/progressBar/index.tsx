@@ -241,7 +241,7 @@ export const ProgressBar = () => {
                 color: "#fe7755",
                 display: "flex",
                 float: "right",
-                marginRight: 65,
+                marginRight: 300,
               }}
               href="./dashboard"
             >
